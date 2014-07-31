@@ -1,4 +1,19 @@
+/**
+ * topbar.css
+ * 顶部工具条
+ */
+
 #topbar{
     height: 30px;
-    background: gray;
+    line-height: 30px;
+    background: #f6f6f6;
+}
+#topbar ul{
+    float: right;
+}
+#topbar li{
+    float: left;
+    padding-left: 24px;
+    margin-left: 22px;
+    _display: inline;
 }

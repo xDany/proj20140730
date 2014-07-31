@@ -1,22 +1,10 @@
-#header,
-#content,
-#footer,
-.layout,
-.clr{
-    *zoom: 1;
+/**
+ * index.css
+ * 首页
+ */
+
+#banner{
+    height: 380px;
+    background: #195f90;
 }
-#header:after,
-#content:after,
-#footer:after,
-.layout:after,
-.clr:after{
-    display: block;
-    overflow: hidden;
-    clear: both;
-    height: 0;
-    content: "\0020";
-}
-.screen{
-    width: 980px;
-    margin: 0 auto;
-}
+

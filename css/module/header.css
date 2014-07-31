@@ -1,4 +1,28 @@
+/**
+ * header.css
+ * 头部导航
+ */
+
 #header{
-    height: 100px;
-    background: gray;
+    height: 92px;
+    background: #fff;
+}
+#header .logo{
+    float: left;
+    width: 300px;
+    height: 92px;
+}
+#header .logo img{
+    width: 300px;
+    height: 92px;
+}
+#header .nav{
+    float: right;
+    line-height: 80px;
+}
+#header .nav li{
+    float: left;
+    margin-left: 28px;
+    _display: inline;
+    font-size: 16px;
 }

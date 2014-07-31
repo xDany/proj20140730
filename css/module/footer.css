@@ -1,4 +1,22 @@
+/**
+ * footer.css
+ * 页脚
+ */
+
 #footer{
-    height: 100px;
-    background: gray;
+    height: 106px;
+    background: #ededed;
+    font-size: 14px;
+    line-height: 32px;
+}
+#footer ul{
+    padding: 30px 0 0 349px;
+}
+#footer ul li{
+    float: left;
+    padding: 0 19px;
+}
+#footer .copyright{
+    text-align: center;
+    color: #3a3a3a;
 }

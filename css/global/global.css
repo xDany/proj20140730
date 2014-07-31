@@ -1,3 +1,8 @@
+/**
+ * global.css
+ * 通用样式
+ */
+
 #header,
 #content,
 #footer,
@@ -19,4 +24,13 @@
 .screen{
     width: 980px;
     margin: 0 auto;
+}
+a:link,
+a:visited{
+    color: #3a3a3a;
+}
+a:hover,
+a:active{
+    color: #ff7300;
+    text-decoration: underline;
 }

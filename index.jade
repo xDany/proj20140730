@@ -1,14 +1,18 @@
 doctype html
 html(lang="zh_CN")
     head
-        include global.jade
-        title
-            主页
+        include include/global-head
+        link(rel="stylesheet", href="css/page/index.css")
+        title 主页
     body
         #page
-            include topbar.jade
-            include header.jade
+            include include/topbar
+            include include/header
             #banner
+                .screen
+                    .layout
             #content
-            include footer.jade
+                .screen
+                    .layout
+            include include/footer
         script(src="js/page/index.js")

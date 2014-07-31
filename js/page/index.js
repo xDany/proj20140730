@@ -3,7 +3,7 @@
  */
 
 require(['test-module'], function(tm){
-    'use strict';
+    // 'use strict';
 
-    console.log(tm);
+    // console.log(tm);
 });
