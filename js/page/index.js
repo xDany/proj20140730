@@ -1,4 +1,12 @@
-#topbar{
-    height: 30px;
-    background: gray;
-}
+/**
+ *
+ */
+
+'use strict';
+
+seajs.use(['jquery', 'test-module'], function($, tm){
+    $(function(){
+        console.log($('#page'));
+        tm();
+    });
+});
