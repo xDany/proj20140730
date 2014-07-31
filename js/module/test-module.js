@@ -2,12 +2,9 @@
  *
  */
 
-'use strict';
+define(['jquery'], function($){
+    'use strict';
 
-define(function(require, exports, module){
-    var testfun = function(){
-        console.log('test-module is ok');
-    };
+    return $('#page');
 
-    module.exports = testfun;
 });
