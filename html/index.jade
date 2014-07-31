@@ -6,6 +6,16 @@ html(lang="zh_CN")
             主页
         link(href="../css/global/reset.css")
         link(href="../css/global/global.css")
+        link(href="../css/module/topbar.css")
+        link(href="../css/module/header.css")
+        link(href="../css/module/footer.css")
+        link(href="../css/page/index.css")
         script(src="../js/lib/sea.js")
     body
-        div
+        #page
+            include topbar.jade
+            include header.jade
+            #banner
+            #content
+            include footer.jade
+        script(src="../js/page/index.js")
