@@ -1,6 +1,7 @@
 var gulp = require('gulp');
 var jade = require('gulp-jade');
 var rjs = require('gulp-requirejs');
+var clean = require('gulp-clean');
 
 gulp.task('templates', function() {
     gulp.src(['./*.jade'])
@@ -20,6 +21,20 @@ gulp.task('templates', function() {
 
 gulp.task('watch', function(){
     gulp.watch(['./*.jade', './include/*.jade'], ['templates']);
+});
+
+gulp.task('clean', function(){
+    return gulp.src(['dist/*'], {read:false})
+    .pipe(clean());
+});
+gulp.task('build',['clean'], function(){
+    gulp.src([
+            './*.html',
+            './css/*/*',
+            './js/*/*',
+            './images/*'
+        ], { base: './' })
+        .pipe(gulp.dest('dist'));
 });
 
 gulp.task('default', ['templates', 'watch']);

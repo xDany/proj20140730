@@ -8,10 +8,13 @@
     line-height: 30px;
     background: #f6f6f6;
 }
-#topbar ul{
+#topbar .layout{
+    position: relative;
+}
+#topbar .top-list{
     float: right;
 }
-#topbar li{
+#topbar .item{
     float: left;
     margin-left: 22px;
     _display: inline;
