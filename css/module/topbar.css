@@ -13,7 +13,24 @@
 }
 #topbar li{
     float: left;
-    padding-left: 24px;
     margin-left: 22px;
     _display: inline;
+}
+#topbar li a{
+    float: left;
+    height: 30px;
+}
+#topbar a.itts{
+    color: #9bacdc;
+}
+/*#topbar a.itts:hover{
+    color: #0096df;
+}*/
+#topbar .map{
+    padding-left: 36px;
+    background: url(../../images/topbar-map.png) no-repeat;
+}
+#topbar .map a{
+    padding-right: 15px;
+    background: url(../../images/topbar-arrow.png) top right no-repeat;
 }

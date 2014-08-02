@@ -10,8 +10,6 @@
     <link rel="stylesheet" href="css/module/header.css">
     <link rel="stylesheet" href="css/module/footer.css">
     <link rel="stylesheet" href="css/page/index.css">
-    <script src="js/lib/require.js"></script>
-    <script src="js/lib/require-config.js"></script>
     <link rel="stylesheet" href="css/page/index.css">
     <title>主页</title>
   </head>
@@ -21,7 +19,7 @@
         <div class="screen">
           <div class="layout">
             <ul>
-              <li class="user"><a href="#">登陆</a><span>&nbsp;-&nbsp;</span><a href="#">注册</a></li>
+              <li class="user"><a href="#">登录&nbsp;&gt;&nbsp;</a><a href="#" class="itts">ITTS防伪平台</a></li>
               <li class="map"><a href="#">网站地图</a></li>
             </ul>
           </div>
@@ -29,15 +27,16 @@
       </div>
       <div id="header">
         <div class="screen">
-          <div class="layout"><a href="#" class="logo"><img src="http://img.la/300x92" alt=""></a>
+          <div class="layout"><a href="#" class="logo"><img src="images/logo.png" alt="智溯科技"></a>
             <ul class="nav">
-              <li><a href="#">首页</a></li>
+              <li class="current"><a href="#">首页</a></li>
               <li><a href="#">解决方案</a></li>
               <li><a href="#">产品中心</a></li>
               <li><a href="#">软件中心</a></li>
               <li><a href="#">技术支持</a></li>
               <li><a href="#">关于我们</a></li>
             </ul>
+            <div class="nav-border"></div>
           </div>
         </div>
       </div>
@@ -64,6 +63,9 @@
         </div>
       </div>
     </div>
+    <script src="js/lib/require.js"></script>
+    <script src="js/lib/require-config.js"></script>
+    <script src="js/global/global.js"></script>
     <script src="js/page/index.js"></script>
   </body>
 </html>
