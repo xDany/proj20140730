@@ -52,7 +52,7 @@ gulp.task('clean', function(){
 });
 
 // 复制HTML和图片
-gulp.task('htmlimg', function(){
+gulp.task('htmlimg', ['clean'], function(){
     gulp.src([
             './*.html',
             './images/*'
@@ -61,7 +61,7 @@ gulp.task('htmlimg', function(){
 });
 
 // 压缩合并css
-gulp.task('css', function(){
+gulp.task('css', ['clean'], function(){
     gulp.src('./css/*/*.css', { base: './' })
         .pipe(minifycss())
         .pipe(gulp.dest('dist'));
@@ -79,7 +79,7 @@ gulp.task('css', function(){
 });
 
 // 压缩css
-gulp.task('js', function(){
+gulp.task('js', ['clean'], function(){
     gulp.src('./js/*/*.js', { base: './' })
         .pipe(uglify())
         .pipe(gulp.dest('dist'));
@@ -90,4 +90,4 @@ gulp.task('default', ['templates', 'watch']);
 // 测试
 gulp.task('test', ['lint']);
 // 打包发布
-gulp.task('build', [ 'test', 'htmlimg', 'css', 'js']);
+gulp.task('build', ['test', 'htmlimg', 'css', 'js']);
