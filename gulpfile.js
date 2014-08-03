@@ -10,18 +10,18 @@ var uglify    = require('gulp-uglify');
 
 // 编译jade
 gulp.task('templates', function() {
-    gulp.src(['./*.jade'])
+    gulp.src(['src/*.jade'])
         .pipe(jade({
             pretty: true
         }))
-        .pipe(gulp.dest('./'));
+        .pipe(gulp.dest('src/'));
 });
 
 // 监听jade修改，开发时用
 gulp.task('templatesWatch', function(){
     gulp.watch([
-            './*.jade',
-            './include/*.jade'
+            'src/*.jade',
+            'src/include/*.jade'
         ], ['templates']);
 });
 
@@ -37,52 +37,58 @@ gulp.task('templatesWatch', function(){
 // 检验js
 gulp.task('lint', function() {
     return gulp.src([
-            './js/global/*',
-            './js/module/*',
-            './js/page/*',
+            'src/js/global/*',
+            'src/js/module/*',
+            'src/js/page/*',
         ])
         .pipe(jshint())
         .pipe(jshint.reporter());
 });
 
-// 清理dist目录
+// 清理build目录
 gulp.task('clean', function(){
-    return gulp.src(['dist'], {read:false})
+    return gulp.src(['build'], {read:false})
     .pipe(clean());
 });
 
-// 复制HTML和图片
-gulp.task('htmlimg', ['clean'], function(){
-    gulp.src([
-            './*.html',
-            './images/*'
-        ], { base: './' })
-        .pipe(gulp.dest('dist'));
+// 图片
+gulp.task('img', ['clean'], function(){
+    gulp.src('src/images/*', { base: 'src' })
+        .pipe(gulp.dest('build'));
+});
+
+// html
+gulp.task('html', ['clean'], function(){
+    gulp.src('src/*.jade', { base: 'src' })
+        .pipe(jade({
+            pretty: true
+        }))
+        .pipe(gulp.dest('build'));
 });
 
 // 压缩合并css
 gulp.task('css', ['clean'], function(){
-    gulp.src('./css/*/*.css', { base: './' })
+    gulp.src('src/css/*/*.css', { base: 'src' })
         .pipe(minifycss())
-        .pipe(gulp.dest('dist'));
+        .pipe(gulp.dest('build'));
 
     gulp.src([
-            './css/global/reset.css',
-            './css/global/common.css',
-            './css/module/topbar.css',
-            './css/module/header.css',
-            './css/footer/header.css'
+            'src/css/global/reset.css',
+            'src/css/global/common.css',
+            'src/css/module/topbar.css',
+            'src/css/module/header.css',
+            'src/css/footer/header.css'
         ])
         .pipe(minifycss())
         .pipe(concat('global.css'))
-        .pipe(gulp.dest('dist/css/global/'));
+        .pipe(gulp.dest('build/css/global/'));
 });
 
 // 压缩css
 gulp.task('js', ['clean'], function(){
-    gulp.src('./js/*/*.js', { base: './' })
+    gulp.src('src/js/*/*.js', { base: 'src/' })
         .pipe(uglify())
-        .pipe(gulp.dest('dist'));
+        .pipe(gulp.dest('build'));
 });
 
 // 开发
@@ -90,4 +96,4 @@ gulp.task('default', ['templates', 'watch']);
 // 测试
 gulp.task('test', ['lint']);
 // 打包发布
-gulp.task('build', ['test', 'htmlimg', 'css', 'js']);
+gulp.task('build', ['test', 'html', 'img', 'css', 'js']);
