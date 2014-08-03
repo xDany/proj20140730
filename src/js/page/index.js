@@ -1,9 +1,21 @@
 /**
- *
+ * page/index.js
+ * 主页
  */
 
-require(['test-module'], function(tm){
-    // 'use strict';
+require(['jquery', 'jquery.slides'], function($, slide){
+    'use strict';
 
-    // console.log(tm);
+    var func = {
+        slide: function(){
+            $('#banner ul').slidesjs();
+        }
+    };
+
+    $(function(){
+        for(var i in func){
+            func[i]();
+        }
+    });
+
 });

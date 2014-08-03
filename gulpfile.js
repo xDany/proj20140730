@@ -51,14 +51,14 @@ gulp.task('clean', function(){
     .pipe(clean());
 });
 
-// 图片
+// 处理图片
 gulp.task('img', ['clean'], function(){
     gulp.src('src/images/*', { base: 'src' })
         .pipe(gulp.dest('build'));
 });
 
-// html
-gulp.task('html', ['clean'], function(){
+// 处理jade
+gulp.task('jade', ['clean'], function(){
     gulp.src('src/*.jade', { base: 'src' })
         .pipe(jade({
             pretty: true
@@ -92,8 +92,8 @@ gulp.task('js', ['clean'], function(){
 });
 
 // 开发
-gulp.task('default', ['templates', 'watch']);
+gulp.task('default', ['templates', 'templatesWatch']);
 // 测试
 gulp.task('test', ['lint']);
 // 打包发布
-gulp.task('build', ['test', 'html', 'img', 'css', 'js']);
+gulp.task('build', ['test', 'jade', 'img', 'css', 'js']);

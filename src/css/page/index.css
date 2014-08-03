@@ -5,6 +5,25 @@
 
 #banner{
     height: 380px;
-    background: #3177af;
+}
+#banner .layout{
+    position: relative;
+}
+#banner .back{
+    position: absolute;
+    height: 380px;
+    width: 100%;
+}
+#banner .back li{
+    height: 380px;
+}
+#banner .back .back1{
+    background: url(../../images/index-banner1.jpg) no-repeat center 0;
+}
+#banner .back .back2{
+    background: url(../../images/index-banner2.jpg) no-repeat center 0;
+}
+#banner .back .back3{
+    background: url(../../images/index-banner3.jpg) no-repeat center 0;
 }
 
