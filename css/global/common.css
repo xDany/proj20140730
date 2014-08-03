@@ -1,0 +1,40 @@
+/**
+ * common.css
+ * 通用样式
+ */
+
+body{
+    font-family: "Microsoft YaHei";
+    color: #787878;
+}
+#header,
+#content,
+#footer,
+.layout,
+.clr{
+    *zoom: 1;
+}
+#header:after,
+#content:after,
+#footer:after,
+.layout:after,
+.clr:after{
+    display: block;
+    overflow: hidden;
+    clear: both;
+    height: 0;
+    content: "\0020";
+}
+.screen{
+    width: 980px;
+    margin: 0 auto;
+}
+a:link,
+a:visited{
+    color: #787878;
+}
+a:hover,
+a:active{
+    color: #0096df !important;
+    text-decoration: none;
+}

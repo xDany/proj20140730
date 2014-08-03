@@ -20,7 +20,8 @@
     margin-left: 22px;
     _display: inline;
 }
-#topbar li a{
+#topbar li a,
+#topbar .user span{
     float: left;
     height: 30px;
 }
@@ -35,6 +36,10 @@
     padding-right: 15px;
     background: url(../../images/topbar-arrow.png) no-repeat top right;
 }
+#topbar .map:hover .map-link,
+#topbar .map-hover .map-link{
+    background-image: url(../../images/topbar-arrow-hover.png)
+}
 #topbar .sitemap{
     position: absolute;
     z-index: 1;
@@ -47,7 +52,8 @@
     box-shadow: 0 5px 8px #333;
     display: none;
 }
-#topbar .map:hover .sitemap{
+#topbar .map:hover .sitemap,
+#topbar .map-hover .sitemap{
     display: block;
 }
 #topbar .sitemap .arrow{

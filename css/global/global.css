@@ -1,39 +1,10 @@
 /**
  * global.css
- * 通用样式
+ * 全局css
  */
 
-body{
-    font-family: "Microsoft YaHei";
-}
-#header,
-#content,
-#footer,
-.layout,
-.clr{
-    *zoom: 1;
-}
-#header:after,
-#content:after,
-#footer:after,
-.layout:after,
-.clr:after{
-    display: block;
-    overflow: hidden;
-    clear: both;
-    height: 0;
-    content: "\0020";
-}
-.screen{
-    width: 980px;
-    margin: 0 auto;
-}
-a:link,
-a:visited{
-    color: #787878;
-}
-a:hover,
-a:active{
-    color: #0096df !important;
-    text-decoration: none;
-}
+@import url(reset.css);
+@import url(common.css);
+@import url(../module/topbar.css);
+@import url(../module/header.css);
+@import url(../module/footer.css);
