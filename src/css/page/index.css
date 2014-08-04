@@ -3,6 +3,7 @@
  * 首页
  */
 
+/*滚动banner*/
 #banner{
     height: 412px;
 }
@@ -12,6 +13,7 @@
 }
 #banner .back{
     position: absolute;
+    z-index: 1;
     height: 412px;
     width: 100%;
     display: none;
@@ -61,6 +63,79 @@
     margin: 0;
     background: #46adda;
 }
+
+/*查询登录*/
+#banner .front{
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+}
+#banner .form{
+    float: right;
+    margin-top: 16px;
+    position: relative;
+}
+#banner .form .switch{
+    position: absolute;
+    width: 52px;
+    height: 52px;
+    top: 0;
+    right: 0;
+}
+#banner .form legend{
+    font-size: 24px;
+    color: #fff;
+}
+#banner .form input{
+    height: 38px;
+    line-height: 38px;
+    border: 0 none;
+    background: #fff;
+    box-shadow: 0 0 6px #ccc inset;
+    font-size: 16px;
+}
+#banner .form button{
+    width: 250px;
+    height: 48px;
+    line-height: 48px;
+    margin-top: 18px;
+    text-align: center;
+    background: #f08619;
+    font-size: 24px;
+    color: #fff;
+    border: 0 none;
+    cursor: pointer;
+}
+#search{
+    width: 278px;
+    height: 278px;
+    padding: 32px 0 0 32px;
+    background-image: url(../../images/search.png);
+}
+#search .search-input{
+    width: 215px;
+    padding-left: 35px;
+    margin-top: 42px;
+}
+#login{
+    width: 260px;
+    height: 288px;
+    padding: 22px 0 0 50px;
+    display: none;
+    background-image: url(../../images/login.png);
+}
+#login input{
+    width: 225px;
+    padding-left: 5px;
+}
+#login .username-input{
+    margin: 22px 0 10px;
+}
+#login form button.login{
+    width: 230px;
+}
+
+/*底部功能区块*/
 .func{
     height: 260px;
 }

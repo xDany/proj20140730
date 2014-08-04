@@ -28,6 +28,23 @@ require(['jquery', 'jquery.slides'], function($, slide){
                     }
                 }
             });
+        },
+
+        search: function(){
+            var formContainer = $('#banner .front');
+            var search = $('#search');
+            var login = $('#login');
+            formContainer.find('a.switch').on('click', function(e){
+                e.preventDefault();
+                if( $(this).hasClass('switch-search') ){
+                    search.show();
+                    login.hide();
+                }else{
+                    login.show();
+                    search.hide();
+                }
+
+            });
         }
     };
 

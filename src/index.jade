@@ -9,14 +9,27 @@ html(lang="zh_CN")
             include include/topbar
             include include/header
             #banner
-                .layout
-                    .back
-                        .back-item.back-item1
-                            .screen
-                                img.erweima(src="http://img.la/100x100.png?s=二维码", alt="")
-                        .back-item.back-item2
-                        .back-item.back-item3
-                    .front
+                .back
+                    .back-item.back-item1
+                        .screen
+                            img.erweima(src="http://img.la/100x100.png?s=二维码", alt="")
+                    .back-item.back-item2
+                    .back-item.back-item3
+                .front
+                    .screen
+                        #search.form
+                            a.switch.switch-login(href="#")
+                            form(action="#")
+                                legend 防伪查询
+                                input.search-input(type="text",placeholder="请输入智溯码进行查询")
+                                button.search(type="submit") 查询
+                        #login.form
+                            a.switch.switch-search(href="#")
+                            form(action="#")
+                                legend 登录
+                                input.username-input(type="text",placeholder="用户名输入")
+                                input.password-input(type="password",placeholder="密码输入")
+                                button.login(type="submit") 登录
             #content
                 .screen
                     .layout
