@@ -6,18 +6,64 @@ html(lang="zh_CN")
         title 主页
     body
         #page
-            //- include include/topbar
-            //- include include/header
+            include include/topbar
+            include include/header
             #banner
                 .layout
                     .back
                         .back-item.back-item1
+                            .screen
+                                img.erweima(src="http://img.la/100x100.png?s=二维码", alt="")
                         .back-item.back-item2
                         .back-item.back-item3
                     .front
             #content
                 .screen
                     .layout
-            //- include include/footer
+                        .func
+                            ul.clr
+                                li.itts
+                                    .func-box
+                                        .icon
+                                            h3 ITTS
+                                        dl
+                                            dt ITTS
+                                            dd
+                                                a(href="#") 真伪查询
+                                            dd
+                                                a(href="#") 渠道管理与防窜货
+                                            dd
+                                                a(href="#") 产品追踪与质量追溯
+                                            dd
+                                                a(href="#") 精确分销决策
+                                        .more
+                                            a(href="#") more&gt;&gt;
+                                li.products
+                                    .func-box
+                                        .icon
+                                            h3 产品介绍
+                                        dl
+                                            dt 产品介绍
+                                            dd
+                                                a(href="#") 防伪APP
+                                            dd
+                                                a(href="#") 电子标签
+                                            dd
+                                                a(href="#") 手持机
+                                            dd
+                                                a(href="#") 读写器
+                                        .more
+                                            a(href="#") more&gt;&gt;
+                                li.solution
+                                    .func-box
+                                        .icon
+                                            h3 解决方案
+                                        dl
+                                            dt 解决方案
+                                            dd
+                                                a(href="#") 消费品
+                                        .more
+                                            a(href="#") more&gt;&gt;
+            include include/footer
         include include/global-js
         script(src="js/page/index.js")

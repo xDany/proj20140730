@@ -4,14 +4,15 @@
  */
 
 #banner{
-    height: 400px;
+    height: 412px;
 }
 #banner .layout{
     position: relative;
+    z-index: 1;
 }
 #banner .back{
     position: absolute;
-    height: 400px;
+    height: 412px;
     width: 100%;
     display: none;
 }
@@ -22,37 +23,127 @@
     background-position: center 0;
 }
 #banner .back .back-item1{
-    /*background: url(../../images/index-banner1.jpg);*/
-    background-image: url(http://img.la/6666FF/1875x380);
+    background-image: url(../../images/index-banner1.jpg);
 }
 #banner .back .back-item2{
-    /*background: url(../../images/index-banner2.jpg);*/
-    background-image: url(http://img.la/99CC66/1875x380);
+    background-image: url(../../images/index-banner2.jpg);
 }
 #banner .back .back-item3{
-    /*background: url(../../images/index-banner3.jpg);*/
-    background-image: url(http://img.la/FF9999/1875x380);
+    background-image: url(../../images/index-banner3.jpg);
+}
+#banner .back .erweima{
+    margin-top: 250px;
 }
 #banner .back .slidesjs-pagination{
-    width: 72px;
-    height: 14px;
-    padding-top: 6px;
+    width: 75px;
+    height: 15px;
+    padding-top: 11px;
 }
 #banner .back .slidesjs-pagination li{
     float: left;
-    width: 14px;
-    height: 14px;
+    width: 15px;
+    height: 15px;
     margin-right: 10px;
 }
 #banner .back .slidesjs-pagination a{
     display: block;
     width: 10px;
     height: 10px;
+    margin: 2px 0 0 2px;
     border-radius: 50%;
-    border: 2px solid #6666FF;
+    background: #d2d2d2;
     text-indent: -100px;
     overflow: hidden;
 }
 #banner .back .slidesjs-pagination a.active{
-    background: #6666FF;
+    width: 15px;
+    height: 15px;
+    margin: 0;
+    background: #46adda;
+}
+.func{
+    height: 260px;
+}
+.func li{
+    float: left;
+    width: 326px;
+    height: 260px;
+    overflow: hidden;
+}
+.func .func-box{
+    height: 520px;
+    transition: all 0.4s;
+}
+.func li:hover .func-box{
+    margin-top: -260px;
+}
+.func .icon{
+    height: 100px;
+    padding-top: 160px;
+    background-repeat: no-repeat;
+    background-position: center 30%;
+}
+.func h3{
+    height: 26px;
+    line-height: 26px;
+    font-size: 20px;
+    color: #7a7a7a;
+    text-align: center;
+}
+.func dl{
+    height: 207px;
+    padding: 5px 66px 0;
+    border-top: 10px solid #fff;
+    background: url(../../images/func-back.png) no-repeat;
+    overflow: hidden;
+}
+.func dt{
+    font-size: 28px;
+    line-height: 42px;
+    margin-bottom: 14px;
+    text-align: center;
+    color: #4fadd3;
+}
+.func dd{
+    height: 28px;
+    line-height: 28px;
+    overflow: hidden;
+    font-size: 14px;
+}
+.func .itts .icon{
+    background-image: url(../../images/func-icon1.png);
+}
+.func .itts dl{
+    border-top-color: #a7dc8c;
+}
+.func .itts dd a{
+    color: #477129;
+}
+.func .products .icon{
+    background-image: url(../../images/func-icon2.png);
+}
+.func .products dl{
+    border-top-color: #9babdc;
+}
+.func .products dd a{
+    color: #777;
+}
+.func .solution .icon{
+    background-image: url(../../images/func-icon3.png);
+}
+.func .solution dl{
+    border-top-color: #f1bf68;
+}
+.func .solution dd a{
+    color: #a58a5d;
+}
+.func .more{
+    height: 38px;
+    padding: 0 66px;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: right;
+}
+.func .more a{
+    color: #4fadd3;
 }
