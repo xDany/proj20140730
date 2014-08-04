@@ -8,6 +8,9 @@ define(['jquery'], function($){
 
     $(function(){
         var hd = $('#header');
+        if(!hd.length){
+            return;
+        }
         var nav = hd.find('ul.nav');
         var cur = nav.find('li.current');
         var nb = hd.find('div.nav-border');

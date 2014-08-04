@@ -6,19 +6,18 @@ html(lang="zh_CN")
         title 主页
     body
         #page
-            include include/topbar
-            include include/header
+            //- include include/topbar
+            //- include include/header
             #banner
                 .layout
                     .back
-                        ul
-                            li.back1
-                            li.back2
-                            li.back3
+                        .back-item.back-item1
+                        .back-item.back-item2
+                        .back-item.back-item3
                     .front
             #content
                 .screen
                     .layout
-            include include/footer
+            //- include include/footer
         include include/global-js
         script(src="js/page/index.js")

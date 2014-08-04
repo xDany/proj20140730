@@ -8,7 +8,26 @@ require(['jquery', 'jquery.slides'], function($, slide){
 
     var func = {
         slide: function(){
-            $('#banner ul').slidesjs();
+            var banner = $('#banner');
+            var width = banner.width();
+            banner.find('.back').slidesjs({
+                width: width,
+                height: 380,
+                navigation: {
+                    active: false
+                },
+                play: {
+                    auto: true
+                },
+                callback: {
+                    loaded: function(){
+                        var nav = banner.find('.slidesjs-pagination');
+                        nav.css({
+                            'padding-left': (width - nav.width()) / 2
+                        });
+                    }
+                }
+            });
         }
     };
 
