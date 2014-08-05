@@ -1,5 +1,4 @@
 var gulp      = require('gulp');
-
 var jade      = require('gulp-jade');
 var rjs       = require('gulp-requirejs');
 var clean     = require('gulp-clean');
@@ -18,11 +17,11 @@ gulp.task('templates', function() {
 });
 
 // 监听jade修改，开发时用
-gulp.task('templatesWatch', function(){
+gulp.task('templatesWatch', function() {
     gulp.watch([
-            'src/*.jade',
-            'src/include/*.jade'
-        ], ['templates']);
+        'src/*.jade',
+        'src/include/*.jade'
+    ], ['templates']);
 });
 
 // gulp.task('requirejs', function(){
@@ -46,20 +45,26 @@ gulp.task('lint', function() {
 });
 
 // 清理build目录
-gulp.task('clean', function(){
-    return gulp.src(['build'], {read:false})
-    .pipe(clean());
+gulp.task('clean', function() {
+    return gulp.src(['build'], {
+            read: false
+        })
+        .pipe(clean());
 });
 
 // 处理图片
-gulp.task('img', ['clean'], function(){
-    gulp.src('src/images/*', { base: 'src' })
+gulp.task('img', ['clean'], function() {
+    gulp.src('src/images/*', {
+        base: 'src'
+    })
         .pipe(gulp.dest('build'));
 });
 
 // 处理jade
-gulp.task('jade', ['clean'], function(){
-    gulp.src('src/*.jade', { base: 'src' })
+gulp.task('jade', ['clean'], function() {
+    gulp.src('src/*.jade', {
+        base: 'src'
+    })
         .pipe(jade({
             pretty: true
         }))
@@ -67,26 +72,30 @@ gulp.task('jade', ['clean'], function(){
 });
 
 // 压缩合并css
-gulp.task('css', ['clean'], function(){
-    gulp.src('src/css/*/*.css', { base: 'src' })
+gulp.task('css', ['clean'], function() {
+    gulp.src('src/css/*/*.css', {
+        base: 'src'
+    })
         .pipe(minifycss())
         .pipe(gulp.dest('build'));
 
     gulp.src([
-            'src/css/global/reset.css',
-            'src/css/global/common.css',
-            'src/css/module/topbar.css',
-            'src/css/module/header.css',
-            'src/css/footer/header.css'
-        ])
+        'src/css/global/reset.css',
+        'src/css/global/common.css',
+        'src/css/module/topbar.css',
+        'src/css/module/header.css',
+        'src/css/footer/header.css'
+    ])
         .pipe(minifycss())
         .pipe(concat('global.css'))
         .pipe(gulp.dest('build/css/global/'));
 });
 
 // 压缩css
-gulp.task('js', ['clean'], function(){
-    gulp.src('src/js/*/*.js', { base: 'src/' })
+gulp.task('js', ['clean'], function() {
+    gulp.src('src/js/*/*.js', {
+        base: 'src/'
+    })
         .pipe(uglify())
         .pipe(gulp.dest('build'));
 });

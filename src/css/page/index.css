@@ -90,9 +90,9 @@
     height: 38px;
     line-height: 38px;
     border: 0 none;
-    background: #fff;
     box-shadow: 0 0 6px #ccc inset;
     font-size: 16px;
+    color: #787878;
 }
 #banner .form button{
     width: 250px;
@@ -116,6 +116,7 @@
     width: 215px;
     padding-left: 35px;
     margin-top: 42px;
+    background: #ebf1f6 url(../../images/icon-search.png) no-repeat;
 }
 #login{
     width: 260px;
@@ -127,12 +128,23 @@
 #login input{
     width: 225px;
     padding-left: 5px;
+    background: #fff;
 }
 #login .username-input{
     margin: 22px 0 10px;
 }
 #login form button.login{
     width: 230px;
+}
+#login .clear-username{
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 92px;
+    right: 42px;
+    cursor: pointer;
+    background: url(../../images/icon-clear.png);
+    display: none;
 }
 
 /*底部功能区块*/

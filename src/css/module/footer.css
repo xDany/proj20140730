@@ -4,7 +4,7 @@
  */
 
 #footer{
-    height: 106px;
+    padding-bottom: 10px;
     background: #ededed;
     font-size: 14px;
     line-height: 32px;
@@ -16,7 +16,7 @@
     float: left;
     padding: 0 19px;
 }
-#footer .copyright{
+#footer p{
     text-align: center;
     color: #787878;
 }
