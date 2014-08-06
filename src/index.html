@@ -92,17 +92,23 @@
             <div id="search" class="form"><a href="#" class="switch switch-login"></a>
               <form action="#">
                 <legend>防伪查询</legend>
-                <input type="text" placeholder="请输入智溯码进行查询" class="search-input empty">
+                <input type="text" placeholder="请输入智溯码进行查询" class="input-text search-input">
                 <button type="submit" class="search">查询</button>
               </form>
             </div>
             <div id="login" class="form"><a href="#" class="switch switch-search"></a>
               <form action="#">
                 <legend>登录</legend>
-                <input type="text" placeholder="用户名输入" class="username-input empty">
-                <input type="password" placeholder="密码输入" class="password-input empty"><span class="clear-username"></span>
-                <p></p>
+                <input type="text" placeholder="用户名输入" class="input-text username-input">
+                <input type="password" placeholder="密码输入" class="input-text password-input"><span class="clear-username"></span>
+                <div class="operation clr">
+                  <div class="left">
+                    <input type="checkbox" class="keep-login">&nbsp;保持登陆
+                  </div>
+                  <div class="right"><a href="#">忘记密码？</a></div>
+                </div>
                 <button type="submit" class="login">登录</button>
+                <div class="reg"><a href="#">用户注册&gt;&gt;</a></div>
               </form>
             </div>
           </div>

@@ -21,17 +21,24 @@ html(lang="zh_CN")
                             a.switch.switch-login(href="#")
                             form(action="#")
                                 legend 防伪查询
-                                input.search-input.empty(type="text",placeholder="请输入智溯码进行查询")
+                                input.input-text.search-input(type="text",placeholder="请输入智溯码进行查询")
                                 button.search(type="submit") 查询
                         #login.form
                             a.switch.switch-search(href="#")
                             form(action="#")
                                 legend 登录
-                                input.username-input.empty(type="text",placeholder="用户名输入")
-                                input.password-input.empty(type="password",placeholder="密码输入")
+                                input.input-text.username-input(type="text",placeholder="用户名输入")
+                                input.input-text.password-input(type="password",placeholder="密码输入")
                                 span.clear-username
-                                p
+                                .operation.clr
+                                    .left
+                                        input.keep-login(type="checkbox")
+                                        | &nbsp;保持登陆
+                                    .right
+                                        a(href="#") 忘记密码？
                                 button.login(type="submit") 登录
+                                .reg
+                                    a(href="#") 用户注册&gt;&gt;
             #content
                 .screen
                     .layout

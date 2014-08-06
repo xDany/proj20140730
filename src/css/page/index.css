@@ -86,7 +86,7 @@
     font-size: 24px;
     color: #fff;
 }
-#banner .form input{
+#banner .form .input-text{
     height: 38px;
     line-height: 38px;
     border: 0 none;
@@ -125,7 +125,7 @@
     display: none;
     background-image: url(../../images/login.png);
 }
-#login input{
+#login .input-text{
     width: 225px;
     padding-left: 5px;
     background: #fff;
@@ -145,6 +145,29 @@
     cursor: pointer;
     background: url(../../images/icon-clear.png);
     display: none;
+}
+#login .operation{
+    width: 230px;
+    height: 14px;
+    line-height: 14px;
+    margin-top: 14px;
+    color: #fff;
+}
+#login .keep-login{
+    border: 0 none;
+}
+#login a{
+    color: #fff;
+}
+#login .reg{
+    width: 230px;
+    height: 14px;
+    line-height: 14px;
+    margin-top: 10px;
+    text-align: right;
+}
+#login .reg a{
+    color: #f08619;
 }
 
 /*底部功能区块*/

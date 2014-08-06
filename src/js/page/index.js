@@ -70,7 +70,7 @@ require([
                 }
             });
             clearIcon.click(function() {
-                usernameInput.val('');
+                usernameInput.val('').focus();
                 clearIcon.hide();
             });
         }

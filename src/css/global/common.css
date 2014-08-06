@@ -38,3 +38,9 @@ a:active{
     color: #0096df !important;
     text-decoration: none;
 }
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
