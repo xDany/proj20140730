@@ -84,7 +84,7 @@ gulp.task('css', ['clean'], function() {
         'src/css/global/common.css',
         'src/css/module/topbar.css',
         'src/css/module/header.css',
-        'src/css/footer/footer.css'
+        'src/css/module/footer.css'
     ])
         .pipe(minifycss())
         .pipe(concat('global.css'))
