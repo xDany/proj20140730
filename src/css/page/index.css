@@ -257,3 +257,8 @@
 .func .more a{
     color: #4fadd3;
 }
+
+/*重写页脚背景*/
+#footer{
+    background: #ededed;
+}

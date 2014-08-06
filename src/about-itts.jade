@@ -1,0 +1,48 @@
+doctype html
+html(lang="zh_CN")
+    head
+        include include/global-head
+        link(rel="stylesheet", href="css/page/about.css")
+        title 关于我们-公司简介
+    body
+        #page
+            include include/topbar
+            include include/header
+            #banner
+            #content
+                .layout
+                    .screen
+                        .crumb
+                            a(href="index.html") 首页
+                            | &nbsp;&gt;&nbsp;
+                            a(href="#") 关于我们
+                            | &nbsp;&gt;&nbsp;
+                            a(href="about-itts.html") ITTS平台
+                        .nav
+                            ul
+                                li
+                                    a(href="about-company.html") 公司简介
+                                li
+                                    a.current(href="about-itts.html") ITTS平台
+                                li
+                                    a(href="#") 企业专栏
+                                li
+                                    a(href="about-contact-us.html") 联系我们
+                        .about-content.about-itts
+                            p ITTS平台是基于物联网技术建立的大型云计算平台，以单品智溯码（普通数码、一维条码、二维条码和RFID标签）为基础，集成智溯赋码系统、防伪溯源系统、防窜货系统、库存管理系统、销量统计与精准销售计划系统等功能模块，实现从产品下线到终端销售完成的全流程管理。加入ITTS系统平台，可确保客户对自身产品全流程信息化实时管理的同时，降低了客户的系统建设成本、建设时间及维护成本，扩大品牌影响力，是发展中企业的高性价比选择。
+                            img(src="images/about-itts.jpg", alt="")
+                            .clr
+                                dl.left
+                                    dt 适用对象
+                                    dd 有品牌维护及提升需求
+                                    dd 要逼退仿冒伪造产品
+                                    dd 欲规范销售渠道，杜绝窜货行为
+                                    dd 无预算或无IT基础建设整套防伪溯源系统
+                                dl.right
+                                    dt 典型应用
+                                    dd 真伪查询
+                                    dd 渠道管理与防窜货
+                                    dd 产品追踪与质量追溯
+                                    dd 精确分销决策
+            include include/footer
+        include include/global-js
