@@ -1,5 +1,5 @@
 /**
- * topbar.css
+ * module/topbar.css
  * 顶部工具条
  */
 
@@ -10,7 +10,7 @@
 }
 #topbar .layout{
     position: relative;
-    z-index: 2;
+    z-index: 10;
 }
 #topbar .top-list{
     float: right;

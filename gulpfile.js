@@ -6,13 +6,13 @@ var jshint    = require('gulp-jshint');
 var minifycss = require('gulp-minify-css');
 var concat    = require('gulp-concat');
 var uglify    = require('gulp-uglify');
+var prettify  = require('gulp-html-prettify');
 
 // 编译jade
 gulp.task('templates', function() {
     gulp.src(['src/*.jade'])
-        .pipe(jade({
-            pretty: true
-        }))
+        .pipe(jade())
+        .pipe(prettify({indent_char: ' ', indent_size: 4}))
         .pipe(gulp.dest('src/'));
 });
 
@@ -39,6 +39,7 @@ gulp.task('lint', function() {
             'src/js/global/*',
             'src/js/module/*',
             'src/js/page/*',
+            '!src/js/module/jquery.*.js'
         ])
         .pipe(jshint())
         .pipe(jshint.reporter());
@@ -73,7 +74,7 @@ gulp.task('jade', ['clean'], function() {
 
 // 压缩合并css
 gulp.task('css', ['clean'], function() {
-    gulp.src('src/css/*/*.css', {
+    gulp.src('src/css/**/*.css', {
         base: 'src'
     })
         .pipe(minifycss())
@@ -93,7 +94,7 @@ gulp.task('css', ['clean'], function() {
 
 // 压缩css
 gulp.task('js', ['clean'], function() {
-    gulp.src('src/js/*/*.js', {
+    gulp.src('src/js/**/*.js', {
         base: 'src/'
     })
         .pipe(uglify())

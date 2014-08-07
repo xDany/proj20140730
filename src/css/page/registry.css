@@ -1,0 +1,130 @@
+/**
+ * page/registry.css
+ * 注册
+ */
+
+.reg-header{
+    margin-top: 46px;
+    height: 42px;
+    background: url(../../images/reg-welcome.png) no-repeat;
+}
+.reg-header .login{
+    float: right;
+    height: 18px;
+    line-height: 18px;
+    padding: 24px 48px 0 0;
+}
+.reg-header .login a,
+.reg-content .prompt a{
+    color: #55a24d;
+}
+
+.reg-content{
+    height: 490px;
+    padding-top: 40px;
+    background: #f8f8f8;
+}
+.reg-content .row{
+    height: 43px;
+    margin-bottom: 30px;
+}
+.reg-content label{
+    float: left;
+    height: 45px;
+    line-height: 45px;
+    width: 230px;
+    text-align: right;
+    font-size: 16px;
+}
+.reg-content label em{
+    color: #e44a48;
+}
+.reg-content .input,
+.reg-content .tip{
+    float: left;
+    height: 43px;
+    line-height: 43px;
+    border: 1px solid #c8c8c7;
+}
+.reg-content .input{
+    width: 253px;
+    padding: 0 38px 0 9px;
+    margin-right: 10px;
+    font-size: 14px;
+    color: #646565;
+    background-color: #fff;
+    background-position: right;
+    background-repeat: no-repeat;
+}
+.reg-content .input:focus{
+    border-color: #8cabb4;
+}
+#captcha{
+    width: 141px;
+    padding: 0 0 0 9px;
+    margin-right: 21px;
+}
+.reg-content .captcha-img{
+    float: left;
+    width: 128px;
+    height: 45px;
+    margin-right: 10px;
+}
+.reg-content .prompt{
+    float: left;
+    height: 22px;
+    line-height: 22px;
+    padding-top: 23px;
+    font-size: 14px;
+    color: #959595;
+}
+.reg-content .tip{
+    width: 290px;
+    padding-left: 10px;
+    color: #82986e;
+    display: none;
+}
+.reg-content .tip-error{
+    color: #d95334;
+}
+.reg-content .row-single{
+    padding-left: 230px;
+    margin-bottom: 10px;
+}
+.reg-content .row-captcha{
+    margin-bottom: 12px;
+}
+.reg-content .row-agreement{
+    font-size: 14px;
+}
+.reg-content .row-agreement .read-agreement{
+    color: #1281bd;
+}
+.reg-content .submit{
+    width: 270px;
+    height: 36px;
+    line-height: 36px;
+    border: 0 none;
+    text-align: center;
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+    background: #2995d3;
+}
+.reg-content .submit:hover,
+.reg-content .submit:active{
+    background: #6abde9;
+}
+#regName{
+    background-image: url(../../images/icon-user.png);
+}
+#pwd,
+#pwdRepeat{
+    background-image: url(../../images/icon-password.png);
+}
+.reg-content .input.success{
+    background-image: url(../../images/icon-success.png) !important;
+}
+.reg-content .input.fail{
+    background-image: url(../../images/icon-fail.png) !important;
+}
