@@ -45,6 +45,7 @@
     height: 43px;
     line-height: 43px;
     border: 1px solid #c8c8c7;
+    overflow: hidden;
 }
 .reg-content .input{
     width: 253px;
@@ -125,6 +126,6 @@
 .reg-content .input.success{
     background-image: url(../../images/icon-success.png) !important;
 }
-.reg-content .input.fail{
+.reg-content .input.error{
     background-image: url(../../images/icon-fail.png) !important;
 }
