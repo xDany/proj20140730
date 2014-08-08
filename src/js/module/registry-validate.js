@@ -32,19 +32,19 @@ define(['jquery'], function($) {
 
     // 校验正则
     var validateRegExp = {
-        email: "^\\w+((-\\w+)|(\\.\\w+))*\\@[A-Za-z0-9]+((\\.|-)[A-Za-z0-9]+)*\\.[A-Za-z0-9]+$", //邮件
-        chinese: "^[\\u4e00-\\u9fa5]+$", //仅中文
-        mobile: "^0?(13|15|18|14)[0-9]{9}$", //手机
-        notempty: "^\\S+$", //非空
-        fullNumber: "^[0-9]+$", //数字
-        password: "^.*[A-Za-z0-9\\w_-]+.*$", //密码
-        username: "^[A-Za-z0-9_\\-\\u4e00-\\u9fa5]+$", //户名
+        email: '^\\w+((-\\w+)|(\\.\\w+))*\\@[A-Za-z0-9]+((\\.|-)[A-Za-z0-9]+)*\\.[A-Za-z0-9]+$', //邮件
+        chinese: '^[\\u4e00-\\u9fa5]+$', //仅中文
+        mobile: '^0?(13|15|18|14)[0-9]{9}$', //手机
+        notempty: '^\\S+$', //非空
+        fullNumber: '^[0-9]+$', //数字
+        password: '^.*[A-Za-z0-9\\w_-]+.*$', //密码
+        username: '^[A-Za-z0-9_\\-\\u4e00-\\u9fa5]+$', //户名
     };
 
     //验证规则
     var validateRules = {
         isNull: function (str) {
-            return (str === "" || typeof str !== "string");
+            return (str === '' || typeof str !== 'string');
         },
         betweenLength: function (str, _min, _max) {
             return (str.length >= _min && str.length <= _max);
@@ -59,42 +59,17 @@ define(['jquery'], function($) {
             // return /^.*([\W_a-zA-z0-9-])+.*$/i.test(str);
             return new RegExp(validateRegExp.password).test(str);
         },
-        isPwdRepeat: function (str1, str2) {
-            return (str1 === str2);
+        isPwdRepeat: function (val1, val2) {
+            return val1 === val2;
         },
         isEmail: function (str) {
             return new RegExp(validateRegExp.email).test(str);
         },
-        // isTel: function (str) {
-        //     return new RegExp(validateRegExp.tel).test(str);
-        // },
         isMobile: function (str) {
             return new RegExp(validateRegExp.mobile).test(str);
         },
-        // checkType: function (element) {
-        //     return (element.attr("type") == "checkbox" || element.attr("type") == "radio" || element.attr("rel") == "select");
-        // },
-    //     isRealName: function (str) {
-    //         return new RegExp(validateRegExp.realname).test(str);
-    //     },
-    //     isCompanyname: function (str) {
-    //         return new RegExp(validateRegExp.companyname).test(str);
-    //     },
-    //     isCompanyaddr: function (str) {
-    //         return new RegExp(validateRegExp.companyaddr).test(str);
-    //     },
-    //     isCompanysite: function (str) {
-    //         return new RegExp(validateRegExp.companysite).test(str);
-    //     },
         simplePwd: function (str) {
-    //        var pin = $("#regName").val();
-    //        if (pin.length > 0) {
-    //            pin = strTrim(pin);
-    //            if (pin == str) {
-    //                return true;
-    //            }
-    //        }
-            return pwdLevel(str) == 1;
+            return pwdLevel(str) === 1;
         }
     };
 
@@ -119,7 +94,13 @@ define(['jquery'], function($) {
         pwd: {
             badLength: [6,20],
             badFormat: ['isPwd'],
-            simplePwd: ['simplePwd']
+            simplePwd: ['simplePwd'],
+            badRepeat: 'isPwdRepeat'
+        },
+        pwdRepeat: {
+            badLength: [6,20],
+            badFormat: ['isPwd'],
+            badRepeat: 'isPwdRepeat'
         }
     };
 
@@ -132,7 +113,7 @@ define(['jquery'], function($) {
                 beUsed: '该用户名已被使用，请重新输入',
                 badLength: '用户名长度只能在4-20位字符之间',
                 badFormat: '用户名只能由中文、英文、数字及“_”、“-”组成',
-                fullNumberName: '用户名不能是纯数字，请确认输入的是手机号或者重新输入'
+                fullNumberName: '<div class="two-lines">用户名不能是纯数字，请确认输入的是手机号或者重新输入</div>'
             },
             onFocusExpand: function() {
                 $('#morePinDiv').removeClass().addClass('intelligent-error hide');
@@ -140,13 +121,13 @@ define(['jquery'], function($) {
         },
 
         pwd: {
-            onFocus: '6-20位字符，可使用字母、数字或符号的组合，不建议使用纯数字，纯字母，纯符号',
+            onFocus: '<div class="two-lines">6-20位字符，可使用字母、数字或符号的组合，不建议使用纯数字，纯字母，纯符号</div>',
             succeed: '',
             isNull: '请输入密码',
             error: {
                 badLength: '密码长度只能在6-20位字符之间',
                 badFormat: '密码只能由英文、数字及标点符号组成',
-                simplePwd: '该密码比较简单，有被盗风险，建议您更改为复杂密码，如字母+数字的组合'
+                simplePwd: '<div class="two-lines">该密码比较简单，有被盗风险，建议您更改为复杂密码，如字母+数字的组合</div>'
                 // weakPwd: '<span>该密码比较简单，有被盗风险，建议您更改为复杂密码</span>'
             },
             onFocusExpand: function() {
@@ -159,8 +140,8 @@ define(['jquery'], function($) {
             isNull: '请输入密码',
             error: {
                 badLength: '密码长度只能在6-20位字符之间',
-                badFormat2: '两次输入密码不一致',
-                badFormat1: '密码只能由英文、数字及标点符号组成'
+                badFormat: '密码只能由英文、数字及标点符号组成',
+                badRepeat: '两次输入密码不一致'
             }
         },
         mobileCode: {
@@ -189,113 +170,141 @@ define(['jquery'], function($) {
         }
     };
 
-    function doValidation(ele){
-        var val = ele.val();
-    }
-
     function showError(ele, tip, prompt){
         tip.html(prompt).addClass('tip-error').show();
         ele.addClass('error');
     }
 
+    function showWarning(ele, tip, prompt){
+        console.log(ele, tip, prompt);
+        tip.html(prompt).show();
+        ele.addClass('success');
+    }
+
     function showSuccess(ele, tip){
         tip.hide();
-        ele.addClass('success');
+        ele.removeClass('error').addClass('success');
     }
 
     function tipLoading(tip){
         tip.html('检验中......');
     }
 
-    $.fn.extend({
-        validate: function() {
-            this.each(function() {
-                var ele = $(this),
-                    id = ele.attr('id'),
-                    prompt = validatePrompt[id],
-                    error = prompt.error,
-                    conf = validateConfig[id],
-                    tip = $('#' + id + '-tip');
+    $(function(){
+        var inputs = $('.input'),
+            pwd = $('#pwd'),
+            pwdRepeat = $('#pwdRepeat'),
+            pwdRepeatTip = $('#pwdRepeat-tip');
 
-                ele.on({
-                    focus: function() {
-                        if (prompt.onFocus) {
-                            tip.html(prompt.onFocus).show().removeClass('tip-error');
-                        }
-                        ele.removeClass('success error');
-                    },
-                    blur: function() {
-                        var val = ele.val(),
-                            fail = false;
+        inputs.each(function() {
+            var ele = $(this),
+                id = ele.attr('id'),
+                prompt = validatePrompt[id],
+                error = prompt.error,
+                conf = validateConfig[id],
+                tip = $('#' + id + '-tip');
 
-                        if(val === ''){
-                            tip.hide();
-                            return;
-                        }else{
-                            // doValidation(ele);
-                            for(var i in conf){
-                                var v = conf[i];
-
-                                switch(i){
-                                    case 'badLength':
-                                        if(!validateRules.betweenLength(val, v[0], v[1])){
-                                            showError(ele, tip, error[i]);
-                                            fail = true;
-                                        }
-                                        break;
-                                    case 'badFormat':
-                                        var isFormat = false;
-                                        for(var j in v){
-                                            // 符合任一即可
-                                            if(validateRules[v[j]](val)){
-                                                isFormat = true;
-                                                break;
-                                            }
-                                        }
-                                        if(!isFormat){
-                                            showError(ele, tip, error[i]);
-                                            fail = true;
-                                        }
-                                        break;
-                                    case 'fullNumberName':
-                                        if(validateRules[i](val) && !validateRules.isMobile(val)){
-                                            showError(ele, tip, error[i]);
-                                            fail = true;
-                                        }
-                                        break;
-                                    case 'beUsed':
-                                        tipLoading(tip);
-                                        // fail = true;
-                                        v(val, function(ok){
-                                            console.log(ok);
-                                            if(ok){
-                                                showSuccess(ele, tip);
-                                            }else{
-                                                showError(ele, tip, error[i]);
-                                            }
-                                        });
-                                        break;
-                                    case 'simplePwd':
-                                        if(validateRules[i](val)){
-                                            // showError(ele, tip, error[i]);
-                                            // fail = true;
-                                        }
-                                        break;
-                                    default:
-                                        break;
-                                }
-
-                                if(fail){
-                                    break;
-                                }
-                            }
-                            if(!fail){
-                                // showSuccess(ele, tip);
-                            }
-                        }
+            ele.on({
+                focus: function() {
+                    if (prompt.onFocus) {
+                        tip.html(prompt.onFocus).show().removeClass('tip-error');
                     }
-                });
+                    ele.removeClass('success error');
+                },
+                blur: function() {
+                    var val = ele.val(),
+                        state = 'success';
+
+                    if(val === ''){
+                        tip.hide();
+                        return;
+                    }else{
+                        // doValidation(ele);
+                        for(var i in conf){
+                            var v = conf[i];
+
+                            switch(i){
+                                case 'badLength':
+                                    if(!validateRules.betweenLength(val, v[0], v[1])){
+                                        showError(ele, tip, error[i]);
+                                        state = 'error';
+                                    }
+                                    break;
+                                case 'badFormat':
+                                    var isFormat = false;
+                                    for(var j in v){
+                                        // 符合任一即可
+                                        if(validateRules[v[j]](val)){
+                                            isFormat = true;
+                                            break;
+                                        }
+                                    }
+                                    if(!isFormat){
+                                        showError(ele, tip, error[i]);
+                                        state = 'error';
+                                    }
+                                    break;
+                                case 'fullNumberName':
+                                    if(validateRules[i](val) && !validateRules.isMobile(val)){
+                                        showError(ele, tip, error[i]);
+                                        state = 'error';
+                                    }
+                                    break;
+                                case 'beUsed':
+                                    tipLoading(tip);
+                                    v(val, function(ok){
+                                        console.log(ok);
+                                        if(ok){
+                                            showSuccess(ele, tip);
+                                        }else{
+                                            showError(ele, tip, error[i]);
+                                            state = 'error';
+                                        }
+                                    });
+                                    break;
+                                case 'simplePwd':
+                                    if(validateRules[i](val)){
+                                        tip.html(error[i]).show();
+                                        state = 'warn';
+                                    }else{
+                                        state = 'success';
+                                    }
+                                    break;
+                                case 'badRepeat':
+                                    var val1 = pwd.val(),
+                                        val2 = pwdRepeat.val();
+
+                                    if(val1 === '' || val2 === ''){
+                                        break;
+                                    }
+                                    if(!validateRules[v](val1, val2)){
+                                        showError(pwdRepeat, pwdRepeatTip, validatePrompt.pwdRepeat.error.badRepeat);
+                                        if(id === 'pwdRepeat'){
+                                            state = 'error';
+                                        }
+                                    }else{
+                                        showSuccess(pwdRepeat, pwdRepeatTip);
+                                    }
+                                    break;
+                                default:
+                                    break;
+                            }
+
+                            if(state === 'error'){
+                                break;
+                            }
+                        }
+                        if(state === 'success'){
+                            showSuccess(ele, tip);
+                        }else if(state === 'warn'){
+                            ele.addClass('success');
+                        }
+
+                    }
+                }
             });
-        }
+        });
+
     });
+
 });

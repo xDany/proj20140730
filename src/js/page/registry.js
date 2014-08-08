@@ -7,9 +7,7 @@ require(['jquery', 'registry-validate'], function($) {
     'use strict';
 
     var func = {
-        validate: function(){
-            $('.input').validate();
-        }
+
     };
 
     $(function() {

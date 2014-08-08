@@ -80,10 +80,13 @@
     color: #959595;
 }
 .reg-content .tip{
-    width: 290px;
-    padding-left: 10px;
+    width: 280px;
+    padding: 0 10px;
     color: #82986e;
     display: none;
+}
+.reg-content .tip .two-lines{
+    line-height: 22px;
 }
 .reg-content .tip-error{
     color: #d95334;

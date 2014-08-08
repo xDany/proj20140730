@@ -18,25 +18,25 @@ html(lang="zh_CN")
                         .reg-content
                             form#registry-form(action="#", method="post")
                                 .row
-                                    label(for="regName")
+                                    label
                                         em *&nbsp;
                                         | 用户名：
                                     input#regName.input(type="text", name="regName", required="required")
                                     div#regName-tip.tip
                                 .row
-                                    label(for="pwd")
+                                    label
                                         em *&nbsp;
                                         | 请设置密码：
                                     input#pwd.pwd.input(type="password", name="pwd")
                                     div#pwd-tip.tip
                                 .row
-                                    label(for="pwdRepeat")
+                                    label
                                         em *&nbsp;
                                         | 请确认密码：
                                     input#pwdRepeat.pwd.input(type="password", name="pwdRepeat")
                                     div#pwdRepeat-tip.tip
                                 .row.row-captcha
-                                    label(for="captcha")
+                                    label
                                         em *&nbsp;
                                         | 验证码：
                                     input#captcha.input(type="text", name="captcha")
