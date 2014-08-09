@@ -1,12 +1,13 @@
-var gulp      = require('gulp');
-var jade      = require('gulp-jade');
-var rjs       = require('gulp-requirejs');
-var clean     = require('gulp-clean');
-var jshint    = require('gulp-jshint');
-var minifycss = require('gulp-minify-css');
-var concat    = require('gulp-concat');
-var uglify    = require('gulp-uglify');
-var prettify  = require('gulp-html-prettify');
+var gulp       = require('gulp');
+var jade       = require('gulp-jade');
+var rjs        = require('gulp-requirejs');
+var clean      = require('gulp-clean');
+var jshint     = require('gulp-jshint');
+var minifycss  = require('gulp-minify-css');
+var concat     = require('gulp-concat');
+var uglify     = require('gulp-uglify');
+var prettify   = require('gulp-html-prettify');
+var livereload = require('gulp-livereload');
 
 // 编译jade
 gulp.task('templates', function() {
@@ -22,6 +23,14 @@ gulp.task('templatesWatch', function() {
         'src/*.jade',
         'src/include/*.jade'
     ], ['templates']);
+});
+
+// livereload
+gulp.task('livereload', function(){
+    var server = livereload();
+    gulp.watch('src/**/*.*', function(file){
+        server.changed(file.path);
+    });
 });
 
 // gulp.task('requirejs', function(){
@@ -92,7 +101,7 @@ gulp.task('css', ['clean'], function() {
         .pipe(gulp.dest('build/css/global/'));
 });
 
-// 压缩css
+// 压缩js
 gulp.task('js', ['clean'], function() {
     gulp.src('src/js/**/*.js', {
         base: 'src/'
@@ -102,7 +111,7 @@ gulp.task('js', ['clean'], function() {
 });
 
 // 开发
-gulp.task('default', ['templates', 'templatesWatch']);
+gulp.task('default', ['templates', 'templatesWatch', 'livereload']);
 // 测试
 gulp.task('test', ['lint']);
 // 打包发布
