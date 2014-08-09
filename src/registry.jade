@@ -21,7 +21,7 @@ html(lang="zh_CN")
                                     label
                                         em *&nbsp;
                                         | 用户名：
-                                    input#regName.input(type="text", name="regName", required="required")
+                                    input#regName.input(type="text", name="regName")
                                     div#regName-tip.tip
                                 .row
                                     label
@@ -29,6 +29,11 @@ html(lang="zh_CN")
                                         | 请设置密码：
                                     input#pwd.pwd.input(type="password", name="pwd")
                                     div#pwd-tip.tip
+                                    div#pwd-lvl
+                                        span 安全程度：
+                                        span.lvl.lvl1 弱
+                                        span.lvl.lvl2 中
+                                        span.lvl.lvl3 强
                                 .row
                                     label
                                         em *&nbsp;
@@ -40,11 +45,14 @@ html(lang="zh_CN")
                                         em *&nbsp;
                                         | 验证码：
                                     input#captcha.input(type="text", name="captcha")
-                                    a.refresh.captcha-img(href="#")
-                                        img(src="images/captcha.png", alt="")
-                                    .prompt
-                                        | 看不清？
-                                        a.refresh(href="#") 换一张
+                                    .captcha-area.clr
+                                        a.refresh.captcha-img(href="#")
+                                            img(src="images/captcha.png", alt="")
+                                        .prompt
+                                            | 看不清？
+                                            a.refresh(href="#") 换一张
+                                    .sms-area
+                                        button.sms 获取短信验证
                                 .row.row-single
                                     div#captcha-tip.tip
                                 .row.row-single.row-agreement
@@ -52,8 +60,7 @@ html(lang="zh_CN")
                                     | &nbsp;我已阅读并同意
                                     a.read-agreement(href="#") 《智溯科技用户注册协议》
                                 .row.row-single.row-button
-                                    button.submit
-                                        | 立即注册
+                                    button.submit 立即注册
             include include/footer
         include include/global-js
         script(src="js/page/registry.js")

@@ -27,6 +27,7 @@
 .reg-content .row{
     height: 43px;
     margin-bottom: 30px;
+    position: relative;
 }
 .reg-content label{
     float: left;
@@ -40,7 +41,8 @@
     color: #e44a48;
 }
 .reg-content .input,
-.reg-content .tip{
+.reg-content .tip,
+.reg-content .sms{
     float: left;
     height: 43px;
     line-height: 43px;
@@ -64,6 +66,23 @@
     width: 141px;
     padding: 0 0 0 9px;
     margin-right: 21px;
+    font-size: 18px;
+}
+.reg-content .captcha-area,
+.reg-content .sms-area{
+    float: left;
+    width: 250px;
+    height: 45px;
+}
+.reg-content .sms-area{
+    display: none;
+}
+.reg-content .sms{
+    width: 104px;
+    color: #636565;
+    text-align: center;
+    background: #f8f8f8;
+    cursor: pointer;
 }
 .reg-content .captcha-img{
     float: left;
@@ -130,5 +149,31 @@
     background-image: url(../../images/icon-success.png) !important;
 }
 .reg-content .input.error{
+    border-color: #ce5c5a;
     background-image: url(../../images/icon-fail.png) !important;
+}
+#pwd-lvl{
+    position: absolute;
+    right: 440px;
+    bottom: -22px;
+    width: 168px;
+    height: 15px;
+    line-height: 14px;
+    font-size: 12px;
+    color: #9c9b9a;
+    display: none;
+}
+#pwd-lvl span{
+    float: left;
+    margin-right: 5px;
+}
+#pwd-lvl .lvl{
+    width: 28px;
+    height: 15px;
+    color: #fff;
+    text-align: center;
+    background: #b2b3b2;
+}
+#pwd-lvl .lvl-active{
+    background: #f18b15;
 }

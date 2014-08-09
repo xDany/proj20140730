@@ -3,7 +3,7 @@
  * 注册
  */
 
-require(['jquery', 'registry-validate'], function($) {
+require(['jquery', 'registry-validate2'], function($) {
     'use strict';
 
     var func = {
