@@ -1,0 +1,84 @@
+/**
+ * page/download.css
+ * 技术支持-下载
+ */
+
+#banner{
+    height: 250px;
+    margin-bottom: 30px;
+    background: url(../../images/banner-support.jpg) no-repeat center 0;
+}
+
+.download-soft{
+    position: relative;
+    height: 602px;
+}
+.download-soft h1{
+    position: absolute;
+    left: 55px;
+    top: 50px;
+    font-size: 26px;
+}
+.download-soft img{
+    position: absolute;
+}
+.download-soft .img1{
+    left: 38px;
+    top: 206px;
+}
+.download-soft .img2{
+    left: 253px;
+    top: 153px;
+}
+.download-soft .img3{
+    left: 408px;
+    top: 40px;
+}
+.download-soft p{
+    position: absolute;
+    left: 30px;
+    top: 316px;
+    width: 320px;
+    padding: 0;
+    font-size: 18px;
+    color: #329ed9;
+    text-indent: 0;
+}
+
+.download-doc{
+    padding: 0 0 100px 44px;
+    width: 714px;
+    color: #3c3c3c;
+}
+.download-doc dl{
+    width: 552px;
+    height: 232px;
+    padding: 18px 0 0 108px;
+}
+.download-doc .doc-pdf{
+    background: url(../../images/icon-pdf.png) no-repeat left 36px;
+}
+.download-doc dt{
+    font-size: 22px;
+    line-height: 46px;
+}
+.download-doc dd{
+    float: left;
+    width: 266px;
+    height: 28px;
+    line-height: 28px;
+    font-size: 18px;
+    overflow: hidden;
+}
+.download-doc .download{
+    clear: both;
+    float: right;
+    width: 138px;
+    height: 44px;
+    line-height: 44px;
+    font-size: 16px;
+}
+.download-doc .download a{
+    display: block;
+    height: 44px;
+}

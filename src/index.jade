@@ -7,12 +7,13 @@ html(lang="zh_CN")
     body
         #page
             include include/topbar
+            - var currentNav = "首页"
             include include/header
             #banner
                 .back
                     .back-item.back-item1
                         .screen
-                            img.erweima(src="http://img.la/100x100.png?s=二维码", alt="")
+                            img.erweima(src="images/test-erweima.png", alt="")
                             a.link(href="#")
                     .back-item.back-item2
                     .back-item.back-item3

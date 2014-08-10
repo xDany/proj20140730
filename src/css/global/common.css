@@ -48,3 +48,13 @@ button{
     cursor: pointer;
     border: 0 none;
 }
+.itrace-button{
+    background: #2995d3;
+    color: #fff !important;
+    text-align: center;
+}
+.itrace-button:hover,
+.itrace-button:active{
+    background: #6abde9;
+    color: #fff !important;
+}

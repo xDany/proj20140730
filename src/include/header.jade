@@ -1,19 +1,16 @@
+- var nav = {'首页': 'index.html','解决方案': 'index.html','产品中心': 'index.html','软件中心': 'index.html','技术支持': 'download-soft.html','关于我们': 'about-company.html'}
+
 #header
     .screen
         .layout
             a.logo(href="#")
                 img(src="images/logo.png", alt="智溯科技")
             ul.nav
-                li.current
-                    a(href="index.html") 首页
-                li
-                    a(href="#") 解决方案
-                li
-                    a(href="#") 产品中心
-                li
-                    a(href="#") 软件中心
-                li
-                    a(href="#") 技术支持
-                li
-                    a(href="about-company.html") 关于我们
+                each val, key in nav
+                    - if (currentNav == key)
+                        li.current
+                            a(href="#{val}") #{key}
+                    - else
+                        li
+                            a(href="#{val}") #{key}
             .nav-border

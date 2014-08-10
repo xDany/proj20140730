@@ -9,10 +9,16 @@
     background: url(../../images/banner-about.jpg) no-repeat center 0;
 }
 
+.about-company,
+.about-itts,
+.about-contact-us{
+    padding: 20px 15px 80px;
+}
 .company-img{
     margin-bottom: 36px;
     width: 730px;
 }
+
 .about-contact-us dt{
     width: 730px;
     margin-bottom: 30px;
@@ -25,6 +31,10 @@
 .about-contact-us,
 .about-contact-us a{
     color: #646464;
+}
+
+.about-itts{
+    padding: 20px 15px 80px;
 }
 .about-itts img{
     padding: 18px 0 20px 28px;

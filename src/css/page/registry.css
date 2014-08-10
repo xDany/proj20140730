@@ -130,14 +130,7 @@
     height: 36px;
     line-height: 36px;
     border: 0 none;
-    text-align: center;
-    color: #fff;
     font-size: 22px;
-    background: #2995d3;
-}
-.reg-content .submit:hover,
-.reg-content .submit:active{
-    background: #6abde9;
 }
 .reg-content .submit-disabled{
     background: #ccc;
@@ -223,15 +216,8 @@
 #agreement-content .footer button{
     width: 322px;
     height: 34px;
-    background: #309dd9;
-    text-align: center;
-    color: #fff;
     font-size: 18px;
     border-radius: 2px;
-}
-#agreement-content .footer button:hover,
-#agreement-content .footer button:active{
-    background: #6abde9;
 }
 .modal{
     z-index: 20 !important;

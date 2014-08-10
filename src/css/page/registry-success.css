@@ -48,13 +48,5 @@
     height: 24px;
     line-height: 24px;
     font-size: 14px;
-    color: #fff;
-    text-align: center;
-    background: #3695ca;
-}
-.success .login-email:hover,
-.success .login-email:active{
-    background: #52b1e5;
-    color: #fff !important;
 }
 

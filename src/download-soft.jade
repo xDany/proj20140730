@@ -1,0 +1,38 @@
+doctype html
+html(lang="zh_CN")
+    head
+        include include/global-head
+        link(rel="stylesheet", href="css/module/detail.css")
+        link(rel="stylesheet", href="css/page/download.css")
+        title 技术支持-软件下载
+    body
+        #page
+            include include/topbar
+            - var currentNav = "技术支持"
+            include include/header
+            #banner
+            #content
+                .layout
+                    .screen
+                        .crumb
+                            a(href="index.html") 首页
+                            | &nbsp;&gt;&nbsp;
+                            a(href="#") 技术支持
+                            | &nbsp;&gt;&nbsp;
+                            a(href="download-soft.html") 软件下载
+                        .detail-nav
+                            ul
+                                li
+                                    a.current(href="download-soft.html") 软件下载
+                                li
+                                    a(href="download-doc.html") 文档下载
+                        .detail-content
+                            .download-soft
+                                h1 智溯查询移动端下载
+                                img.img1(src="images/download-soft1.png", alt="")
+                                img.img2(src="images/download-soft2.png", alt="")
+                                img.img3(src="images/download-soft3.jpg", alt="")
+                                p
+                                    | 智溯软件是由上海智溯信息科技有限公司研发的一款便携的手机解码识别软件，支持NFC和二维码，具有信息查询、流程追溯、数据存储、扫描定位、语音播报等多项功能。是目前最快的手机二维码和条码扫描软件之一。
+            include include/footer
+        include include/global-js

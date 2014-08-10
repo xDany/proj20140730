@@ -8,6 +8,7 @@ html(lang="zh_CN")
     body
         #page
             include include/topbar
+            - var currentNav = "关于我们"
             include include/header
             #banner
             #content
@@ -29,16 +30,17 @@ html(lang="zh_CN")
                                     a(href="#") 企业专栏
                                 li
                                     a.current(href="about-contact-us.html") 联系我们
-                        .detail-content.about-contact-us
-                            dl
-                                dt
-                                    img.map-img(src="images/about-map.jpg", alt="")
-                                dd 智溯信息科技（上海）有限公司
-                                dd 地址：上海市浦东新区祖冲之路2288弄3号楼712室
-                                dd 邮编(Zip)：201210
-                                dd 电话(Tel)：+86 021-61998001
-                                dd 传真(Fax)：+86 021-61998001
-                                dd 邮箱(Email)：
-                                    a(href="mailto:service@itrace.com.cn") service@itrace.com.cn
+                        .detail-content
+                            .about-contact-us
+                                dl
+                                    dt
+                                        img.map-img(src="images/about-map.jpg", alt="")
+                                    dd 智溯信息科技（上海）有限公司
+                                    dd 地址：上海市浦东新区祖冲之路2288弄3号楼712室
+                                    dd 邮编(Zip)：201210
+                                    dd 电话(Tel)：+86 021-61998001
+                                    dd 传真(Fax)：+86 021-61998001
+                                    dd 邮箱(Email)：
+                                        a(href="mailto:service@itrace.com.cn") service@itrace.com.cn
             include include/footer
         include include/global-js
