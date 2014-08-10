@@ -46,4 +46,5 @@ a:active{
 }
 button{
     cursor: pointer;
+    border: 0 none;
 }

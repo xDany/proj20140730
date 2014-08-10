@@ -34,6 +34,12 @@ gulp.task('livereload', function(){
     });
 });
 
+// // 图片尺寸
+// gulp.task('imgsize', function() {
+//     gulp.src('src/images/*.*', {base: 'src'})
+//         .pipe(imgsize());
+// });
+
 // gulp.task('requirejs', function(){
 //     rjs({
 //         baseUrl: './js/page/index.js',
@@ -61,14 +67,14 @@ gulp.task('clean', function() {
         .pipe(clean());
 });
 
-// 处理图片
+// 压缩图片
 gulp.task('img', ['clean'], function() {
     gulp.src('src/images/*.*', {base: 'src'})
-        // .pipe(imagemin({
-        //     optimizationLevel: 3,
-        //     progressive: true,
-        //     interlaced: true
-        // }))
+        .pipe(imagemin({
+            optimizationLevel: 3,
+            progressive: true,
+            interlaced: true
+        }))
         .pipe(gulp.dest('build'));
 });
 

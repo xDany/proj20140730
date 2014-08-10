@@ -227,8 +227,11 @@
     text-align: center;
     color: #fff;
     font-size: 18px;
-    border: 0 none;
     border-radius: 2px;
+}
+#agreement-content .footer button:hover,
+#agreement-content .footer button:active{
+    background: #6abde9;
 }
 .modal{
     z-index: 20 !important;

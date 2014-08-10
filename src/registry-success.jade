@@ -1,0 +1,29 @@
+doctype html
+html(lang="zh_CN")
+    head
+        include include/global-head
+        link(rel="stylesheet", href="css/page/registry-success.css")
+        title 注册成功
+    body
+        #page
+            include include/topbar
+            include include/header
+            #content
+                .layout
+                    .screen
+                        .reg-header
+                        .reg-content
+                            .success.success-email
+                                h3
+                                    | 恭喜，
+                                    em 123456@xx.com
+                                    | 已完成注册
+                                a.return-home(href="index.html") 返回首页
+                                p
+                                    | 系统向您的邮箱
+                                    em 123456@xx.com
+                                    | 发送了一封验证邮件，请您登陆邮箱，点击邮箱中的链接完成邮箱验证，如果您超过2分钟未收到邮件，您可以
+                                    a.send-again(href="#") 重新发送
+                                a.button.login-email(href="#") 登陆邮箱
+            include include/footer
+        include include/global-js
