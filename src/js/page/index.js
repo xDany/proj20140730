@@ -7,14 +7,14 @@ require([
     'jquery',
     'jquery.slides',
     'jquery.placeholder'
-    ], function($, slide, placeholder) {
+    ], function($) {
     'use strict';
 
     var func = {
         // banner滚动
         slide: function() {
-            var banner = $('#banner');
-            var width = banner.width();
+            var banner = $('#banner'),
+                width = banner.width();
             banner.find('.back').slidesjs({
                 width: width,
                 height: 380,
@@ -33,6 +33,11 @@ require([
                     }
                 }
             });
+            $(window).resize(function(){
+                banner.find('.slidesjs-pagination').css({
+                    'padding-left': ($(window).width() - banner.find('.slidesjs-pagination').width()) / 2
+                })
+            });
         },
 
         // 初始化placeholder
@@ -42,9 +47,19 @@ require([
 
         // 搜索框
         search: function() {
-            var formContainer = $('#banner .front');
-            var search = $('#search');
-            var login = $('#login');
+            var formContainer = $('#banner .front'),
+                search = $('#search'),
+                login = $('#login'),
+                win = $(window);
+
+            function updateContainerPos(){
+                formContainer
+                    .css('right', (win.width() - 980) / 2)
+                    .fadeIn();
+            }
+
+            updateContainerPos();
+            win.resize(updateContainerPos);
 
             // 切换登录与查询
             formContainer.find('a.switch').on('click', function(e) {
@@ -58,9 +73,9 @@ require([
                 }
             });
 
-            // 登录框x号
-            var clearIcon = login.find('.clear-username');
-            var usernameInput = login.find('.username-input');
+            // 登录框重置内容
+            var clearIcon = login.find('.clear-username'),
+                usernameInput = login.find('.username-input');
             usernameInput.on('keydown', function() {
                 var val = usernameInput.val();
                 if (val !== '' && val !== usernameInput.attr('placeholder')) {

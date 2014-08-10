@@ -180,6 +180,9 @@ define(['jquery'], function($) {
             captcha: {
                 isNull: '请输入验证码',
                 error: '验证码错误，请核对后再输入'
+            },
+            agreement: {
+                isNull: '请先阅读并同意《智溯科技用户注册协议》'
             }
         };
 
@@ -229,7 +232,8 @@ define(['jquery'], function($) {
                 },
                 blur: function(){
                     var val = ele.val(),
-                        state = 'success';
+                        state = 'success',
+                        d = null;
 
                     if(val === ''){
                         tip.hide();
@@ -242,6 +246,7 @@ define(['jquery'], function($) {
                         switch(i){
                             case 'beUsed': // 用户名是否可用
                                 inputValidationUtil.tipLoading(tip);
+                                d = $.Deferred();
                                 conf[i].method(val, function(success){
                                     if(success){
                                         inputValidationUtil.showSuccess(ele, tip);
@@ -249,6 +254,7 @@ define(['jquery'], function($) {
                                         inputValidationUtil.showError(ele, tip, error);
                                         state = 'error';
                                     }
+                                    d.resolve();
                                 });
                                 break;
 
@@ -287,32 +293,29 @@ define(['jquery'], function($) {
                             break;
                         }
                     }
-                    if(state === 'success'){
-                        inputValidationUtil.showSuccess(ele, tip);
-                    }else if(state === 'warn'){
-                        ele.removeClass('error').addClass('success');
+                    if(d){
+                        // 有异步验证
+                        d.done(function(){
+                            if(state === 'success'){
+                                inputValidationUtil.showSuccess(ele, tip);
+                            }else if(state === 'warn'){
+                                ele.removeClass('error').addClass('success');
+                            }
+                            ele.data('validation', state);
+                        });
+                    }else{
+                        // 无异步验证
+                        if(state === 'success'){
+                            inputValidationUtil.showSuccess(ele, tip);
+                        }else if(state === 'warn'){
+                            ele.removeClass('error').addClass('success');
+                        }
+                        ele.data('validation', state);
                     }
-                    ele.data('validation', state);
+
                 }
             });
 
-        });
-
-        // 点击提交按钮的校验
-        container.find('form').submit(function(){
-            var validationPass = true;
-            inputs.each(function(){
-                var ele = $(this),
-                    validation = ele.data('validation');
-                if(!validation){
-                    // 此字段未曾编辑过，显示为空提示
-                    inputValidationUtil.showNull(ele);
-                    validationPass = false;
-                }else if(validation === 'error'){
-                    validationPass = false;
-                }
-            });
-            return validationPass;
         });
 
         // 密码安全等级
@@ -370,6 +373,39 @@ define(['jquery'], function($) {
             agree.prop('checked') ?
                 submitButton.prop('disabled', false).removeClass('submit-disabled')
                 : submitButton.prop('disabled', true).addClass('submit-disabled');
+        });
+
+        // 点击提交按钮的校验
+        container.find('form').submit(function(){
+            var validationPass = true;
+            inputs.each(function(){
+                var ele = $(this),
+                    validation = ele.data('validation');
+                if(!validation){
+                    // 此字段未曾编辑过，显示为空提示
+                    inputValidationUtil.showNull(ele);
+                    validationPass = false;
+                }else if(validation === 'error'){
+                    validationPass = false;
+                }
+            });
+            if(validationPass){
+                // 如果填写字段全部验证通过，再判断是否同意协议
+                if(!agree.prop('checked')){
+                    validationPass = false;
+                    alert(tips.agreement.isNull);
+                }
+            }
+            return validationPass;
+        });
+
+        // 阻止回车提交
+        inputs.keypress(function(e){
+            var code = e.keyCode || e.which;
+            if(code === 13){
+                e.preventDefault();
+                return false;
+            }
         });
 
     });

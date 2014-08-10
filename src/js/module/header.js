@@ -11,11 +11,11 @@ define(['jquery'], function($){
         if(!hd.length){
             return;
         }
-        var nav = hd.find('ul.nav');
-        var cur = nav.find('li.current');
-        var nb = hd.find('div.nav-border');
-        var itemLeft = cur.css('padding-left').split('px')[0] - 0;
-        var outTimer;
+        var nav = hd.find('ul.nav'),
+            cur = nav.find('li.current'),
+            nb = hd.find('div.nav-border'),
+            itemLeft = cur.css('padding-left').split('px')[0] - 0,
+            outTimer;
 
         nav.on('mouseenter', 'li', function(){
             clearTimeout(outTimer);

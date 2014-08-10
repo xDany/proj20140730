@@ -9,56 +9,9 @@
     background: url(../../images/about-banner.jpg) no-repeat center 0;
 }
 
-.crumb{
-    height: 54px;
-    line-height: 54px;
-    padding-left: 32px;
-    font-size: 16px;
-}
-
-.about-nav{
-    float: left;
-    width: 200px;
-}
-.about-nav li{
-    height: 50px;
-    line-height: 50px;
-    margin-bottom: 1px;
-    font-size: 20px;
-}
-.about-nav a{
-    display: block;
-    height: 50px;
-    padding-left: 16px;
-    background: #f0f0f0;
-    color: #8a8a8a;
-    transition: all 0.3s;
-}
-.about-nav a:hover,
-.about-nav a.current{
-    padding-left: 52px;
-    background: #329ed9;
-    color: #fff !important;
-}
-
-.about-content{
-    float: right;
-    width: 730px;
-    padding: 20px 15px 80px;
-    border: 1px solid #e3e3e3;
-    color: #656565;
-    font-size: 16px;
-    line-height: 28px;
-    overflow: hidden;
-}
 .company-img{
     margin-bottom: 36px;
     width: 730px;
-}
-.about-content p{
-    padding: 0 82px 0 28px;
-    text-indent: 2em;
-    letter-spacing: 1px;
 }
 .about-contact-us dt{
     width: 730px;

@@ -1,0 +1,52 @@
+/**
+ * module/detail.css
+ * 面包屑、左导航、右内容布局
+ */
+
+.crumb{
+    height: 54px;
+    line-height: 54px;
+    padding-left: 32px;
+    font-size: 16px;
+}
+
+.detail-nav{
+    float: left;
+    width: 200px;
+}
+.detail-nav li{
+    height: 50px;
+    line-height: 50px;
+    margin-bottom: 1px;
+    font-size: 20px;
+}
+.detail-nav a{
+    display: block;
+    height: 50px;
+    padding-left: 16px;
+    background: #f0f0f0;
+    color: #8a8a8a;
+    transition: all 0.3s;
+}
+.detail-nav a:hover,
+.detail-nav a.current{
+    padding-left: 52px;
+    background: #329ed9;
+    color: #fff !important;
+}
+
+.detail-content{
+    float: right;
+    width: 730px;
+    padding: 20px 15px 80px;
+    border: 1px solid #e3e3e3;
+    color: #656565;
+    font-size: 16px;
+    line-height: 28px;
+    overflow: hidden;
+}
+.detail-content p{
+    padding: 0 82px 0 28px;
+    text-indent: 2em;
+    letter-spacing: 1px;
+}

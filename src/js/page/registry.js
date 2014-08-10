@@ -3,7 +3,11 @@
  * 注册
  */
 
-require(['jquery', 'registry-validate', 'jquery.modal'], function($) {
+require([
+    'jquery',
+    'registry-validate',
+    'jquery.modal'
+    ], function($) {
     'use strict';
 
     var func = {
