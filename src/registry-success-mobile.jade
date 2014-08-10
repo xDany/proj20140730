@@ -1,0 +1,30 @@
+doctype html
+html(lang="zh_CN")
+    head
+        include include/global-head
+        link(rel="stylesheet", href="css/page/registry-success.css")
+        title 注册成功
+    body
+        #page
+            include include/topbar
+            include include/header
+            #content
+                .layout
+                    .screen
+                        .reg-header
+                        .reg-content
+                            .success.success-mobile
+                                h3
+                                    | 恭喜，
+                                    em 13312345678
+                                    | 已完成注册
+                                a.return-home(href="index.html") 返回首页
+                                p
+                                    | 请输入您的邮箱，以便我们联系您
+                                form(action="#")
+                                    input.input#email(type="text", name="email")
+                                    button.submit(type="submit") 发送邮件
+                                    span ，完成邮箱验证
+            include include/footer
+        include include/global-js
+        script(src="js/page/registry-success.js")

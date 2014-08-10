@@ -80,9 +80,9 @@ define(['jquery'], function($) {
                 },
                 badFormat: {
                     method : function(str){
-                        return !(rules.isUid(str) || rules.isMobile(str) || rules.isEmail(str));
+                        return !(rules.isMobile(str) || rules.isEmail(str));
                     },
-                    tip: '用户名只能由中文、英文、数字及“_”、“-”组成'
+                    tip: '用户名只能是邮箱地址或手机号'
                 },
                 fullNumberName: {
                     method: function(str){
@@ -166,8 +166,8 @@ define(['jquery'], function($) {
 
         var tips = {
             regName: {
-                onFocus: '请输入邮箱/用户名/手机号',
-                isNull: '请输入邮箱/用户名/手机号'
+                onFocus: '请输入邮箱/手机号',
+                isNull: '请输入邮箱/手机号'
             },
             pwd: {
                 onFocus: '<div class="two-lines">6-20位字符，可使用字母、数字或符号的组合，不建议使用纯数字，纯字母，纯符号</div>',
@@ -237,7 +237,9 @@ define(['jquery'], function($) {
 
                     if(val === ''){
                         tip.hide();
-                        ele.removeClass('error success');
+                        ele
+                            .removeClass('error success')
+                            .data('validation', 'isnull');
                         return;
                     }
 
@@ -381,8 +383,8 @@ define(['jquery'], function($) {
             inputs.each(function(){
                 var ele = $(this),
                     validation = ele.data('validation');
-                if(!validation){
-                    // 此字段未曾编辑过，显示为空提示
+                if(!validation || ele.val() === ''){
+                    // 此字段未曾编辑过或为空，显示为空提示
                     inputValidationUtil.showNull(ele);
                     validationPass = false;
                 }else if(validation === 'error'){
