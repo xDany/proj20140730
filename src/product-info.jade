@@ -1,0 +1,17 @@
+doctype html
+html(lang="zh_CN")
+    head
+        include include/global-head
+        link(rel="stylesheet", href="css/page/product-info.css")
+        title 主页
+    body
+        #page
+            include include/topbar
+            - var currentNav = "首页"
+            include include/header
+            #banner.banner-common
+            #content
+                .prod
+            include include/footer
+        include include/global-js
+        script(src="js/page/product-info.js")

@@ -58,3 +58,9 @@ button{
     background: #6abde9;
     color: #fff !important;
 }
+.banner-common{
+    height: 250px;
+    margin-bottom: 30px;
+    background-position: center 0;
+    background-repeat: no-repeat;
+}

@@ -4,9 +4,7 @@
  */
 
 #banner{
-    height: 250px;
-    margin-bottom: 30px;
-    background: url(../../images/banner-support.jpg) no-repeat center 0;
+    background-image: url(../../images/banner-support.jpg);
 }
 
 .download-soft{

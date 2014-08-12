@@ -1,5 +1,5 @@
 /**
- * module/registry-success.js
+ * page/registry-success.js
  * 注册成功
  */
 

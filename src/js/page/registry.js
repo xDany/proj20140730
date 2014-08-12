@@ -1,5 +1,5 @@
 /**
- * module/registry.js
+ * page/registry.js
  * 注册
  */
 

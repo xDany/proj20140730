@@ -4,9 +4,7 @@
  */
 
 #banner{
-    height: 250px;
-    margin-bottom: 30px;
-    background: url(../../images/banner-about.jpg) no-repeat center 0;
+    background-image: url(../../images/banner-about.jpg);
 }
 
 .about-company,
