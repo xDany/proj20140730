@@ -11,7 +11,41 @@ html(lang="zh_CN")
             include include/header
             #banner.banner-common
             #content
-                .prod
+                .layout
+                    .screen
+                        .prod-module
+                            .header
+                                ul.tab-header.clr
+                                    li.tab-t 产品信息
+                                    li.tab-t 生产信息
+                                    li.tab-t 原料信息
+                                a.continue(href="index.html") 继续查询
+                            .content
+                                .tab-b-wrap
+                                    .tab-b
+                                        ul.clr.features
+                                            li 产品名称
+                                            li 包装规格
+                                            li 品牌名称
+                                            li 质保期
+                                            li 公司名称
+                                            li 联系方式
+                                            li 公司地址
+                                    .tab-b.hide
+                                        ul.clr.features
+                                            li 生产批次
+                                            li 生产许可证号
+                                            li 生产日期
+                                            li 厂商名称
+                                            li 厂商地址
+                                            li 联系方式
+                                    .tab-b.hide
+                                        ul.clr.features
+                                            li 原料信息
+                                            li 原料批次
+                                            li 入库时间
+                                .gallery
+
             include include/footer
         include include/global-js
         script(src="js/page/product-info.js")

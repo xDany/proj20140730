@@ -88,6 +88,20 @@ require([
                 usernameInput.val('').focus();
                 clearIcon.hide();
             });
+        },
+
+        // geetest验证
+        // http://geetest.com/install/#api
+        geetest: function(){
+            var gt_custom_ajax = function(result, selector, message){
+                if(result){
+                    $('#search button.search')
+                        .prop('disabled', false)
+                        .removeClass('disabled');
+                }
+            }
+
+            window.gt_custom_ajax = gt_custom_ajax;
         }
     };
 

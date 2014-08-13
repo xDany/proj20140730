@@ -15,7 +15,7 @@
     position: absolute;
     left: 55px;
     top: 50px;
-    font-size: 26px;
+    font-size: 20px;
 }
 .download-soft img{
     position: absolute;
@@ -38,7 +38,6 @@
     top: 316px;
     width: 320px;
     padding: 0;
-    font-size: 18px;
     color: #329ed9;
     text-indent: 0;
 }
@@ -57,15 +56,14 @@
     background: url(../../images/icon-pdf.png) no-repeat left 36px;
 }
 .download-doc dt{
-    font-size: 22px;
+    font-size: 16px;
     line-height: 46px;
 }
 .download-doc dd{
     float: left;
     width: 266px;
-    height: 28px;
-    line-height: 28px;
-    font-size: 18px;
+    height: 26px;
+    line-height: 26px;
     overflow: hidden;
 }
 .download-doc .download{

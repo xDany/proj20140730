@@ -3,11 +3,13 @@
  * 产品信息
  */
 
-require(['jquery'], function($) {
+require(['jquery', 'tabs'], function($, tabs) {
     'use strict';
 
     var func = {
-
+        initTabs: function(){
+            $('.prod-module').tabs();
+        }
     };
 
     $(function() {

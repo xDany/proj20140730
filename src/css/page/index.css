@@ -114,6 +114,10 @@
     font-size: 24px;
     color: #fff;
 }
+#banner .form button.disabled{
+    background: #ccc;
+    cursor: default;
+}
 #search{
     width: 278px;
     height: 278px;
@@ -216,7 +220,7 @@
     overflow: hidden;
 }
 .func dt{
-    font-size: 28px;
+    font-size: 24px;
     line-height: 42px;
     margin-bottom: 14px;
     text-align: center;
@@ -270,3 +274,23 @@
 #footer{
     background: #ededed;
 }
+
+/*geetest验证码*/
+#banner .gt_holder{
+    /*width: 250px;*/
+    margin-top: 44px;
+}
+/*#banner .gt_slider_holder{
+    width: 200px;
+    height: 28px;
+    background: url(../../images/geetest-back.png);
+}
+#banner .gt_slider_knob{
+    width: 43px;
+    height: 25px;
+    top: 1px;
+    background: url(../../images/geetest-slider.png);
+}
+#banner .gt_guide_tip{
+    display: none;
+}*/

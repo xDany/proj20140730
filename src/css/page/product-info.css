@@ -6,3 +6,61 @@
 #banner{
     background-image: url(../../images/banner-product.jpg);
 }
+
+.prod-module{
+    height: 752px;
+    margin: 15px 0;
+    box-shadow: 0 0 20px #ccc;
+}
+.prod-module .header{
+    height: 60px;
+    padding-left: 14px;
+    background: #329ed9;
+    color: #fff;
+    font-size: 16px;
+}
+.prod-module .header .tab-header{
+    float: left;
+}
+.prod-module .header .tab-header li{
+    float: left;
+    width: 185px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+}
+.prod-module .header .tab-header .current{
+    height: 46px;
+    line-height: 46px;
+    margin-top: 14px;
+    background: #f6f6f5;
+    color: #616363;
+}
+.prod-module .header .continue{
+    float: right;
+    height: 16px;
+    line-height: 16px;
+    margin: 34px 66px 0 0;
+    color: #fff;
+    _display: inline;
+}
+.prod-module .content{
+    height: 692px;
+    background: #f6f6f5;
+}
+.prod-module .content .tab-b-wrap{
+    height: 240px;
+    overflow: hidden;
+}
+.prod-module .content .tab-b{
+    height: 190px;
+    padding: 50px 0 0 60px;
+    font-size: 14px;
+}
+.prod-module .content .tab-b li{
+    float: left;
+    width: 460px;
+    height: 40px;
+    line-height: 40px;
+    overflow: hidden;
+}

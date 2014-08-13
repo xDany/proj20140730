@@ -23,7 +23,8 @@ html(lang="zh_CN")
                         form(action="#")
                             legend 防伪查询
                             input.input-text.search-input(type="text",placeholder="请输入智溯码进行查询")
-                            button.search(type="submit") 查询
+                            script(src="http://api.geetest.com/get.php?gt=e266eab79debb5bb3e85597bb6122f87")
+                            button.search.disabled(type="submit", disabled="disabled") 查询
                     #login.form
                         a.switch.switch-search(href="#")
                         form(action="#")
@@ -41,8 +42,8 @@ html(lang="zh_CN")
                             .reg
                                 a(href="registry.html") 用户注册&gt;&gt;
             #content
-                .screen
-                    .layout
+                .layout
+                    .screen
                         .func
                             ul.clr
                                 li.itts
