@@ -219,8 +219,8 @@
     font-size: 18px;
     border-radius: 2px;
 }
+
 .modal{
-    z-index: 20 !important;
     padding: 0;
 }
 .modal a.close-modal{
@@ -230,7 +230,4 @@
     height: 26px;
     background: url(../../images/agreement-close.png);
 }
-.jquery-modal{
-    z-index: 15 !important;
-    opacity: 0.4 !important;
-}
+

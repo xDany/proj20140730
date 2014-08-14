@@ -119,9 +119,9 @@
     cursor: default;
 }
 #search{
-    width: 278px;
+    width: 300px;
     height: 278px;
-    padding: 32px 0 0 32px;
+    padding: 32px 0 0 10px;
     background-image: url(../../images/search.png);
 }
 #search .search-input{
@@ -268,6 +268,92 @@
 }
 .func .more a{
     color: #4fadd3;
+}
+
+/*查询结果*/
+.modal{
+    padding: 0;
+}
+#close-modal{
+    display: none !important;
+}
+.search-popup,
+.search-popup .error,
+.search-popup .success,
+.search-popup .warning{
+    display: none;
+}
+.search-popup-error .error,
+.search-popup-success .success,
+.search-popup-warning .warning{
+    display: block;
+}
+.search-popup{
+    width: 650px;
+    height: 325px;
+    padding-top: 125px;
+    background-color: #fff;
+    background-position: center 0;
+    background-repeat: no-repeat;
+    color: #3e3f3f;
+    text-align: center;
+}
+.search-popup h2{
+    font-size: 22px;
+    line-height: 48px;
+    margin-bottom: 4px;
+}
+.search-popup .code{
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.search-popup .search-times{
+    font-size: 18px;
+    line-height: 40px;
+    margin-bottom: 26px;
+}
+.search-popup-success .search-times{
+    margin-bottom: 90px;
+}
+.search-popup .notice,
+.search-popup .tip{
+   font-size: 14px;
+   line-height: 28px;
+}
+.search-popup .notice{
+    margin-bottom: 10px;
+}
+.search-popup .tip{
+    margin-bottom: 40px;
+    color: #3d8350;
+}
+.search-popup .footer a{
+    float: left;
+    width: 325px;
+    font-size: 20px;
+}
+.search-popup .footer .action{
+    color: #3d8350;
+}
+.search-popup .footer .action:hover,
+.search-popup .footer .action:active{
+    color: #2ba03a !important;
+}
+.search-popup .footer .close{
+    color: #3d7da7;
+}
+.search-popup .footer .close:hover,
+.search-popup .footer .close:active{
+    color: #4ba2c6 !important;
+}
+.search-popup-error{
+    background-image: url(../../images/searchpop-error.png);
+}
+.search-popup-success{
+    background-image: url(../../images/searchpop-success.png);
+}
+.search-popup-warning{
+    background-image: url(../../images/searchpop-warning.png);
 }
 
 /*重写页脚背景*/

@@ -6,7 +6,8 @@
 require([
     'jquery',
     'jquery.slides',
-    'jquery.placeholder'
+    'jquery.placeholder',
+    'jquery.modal'
     ], function($) {
     'use strict';
 
@@ -50,6 +51,7 @@ require([
             var formContainer = $('#banner .front'),
                 search = $('#search'),
                 login = $('#login'),
+                popUp = $('#search-popup'),
                 win = $(window);
 
             function updateContainerPos(){
@@ -73,8 +75,61 @@ require([
                 }
             });
 
-            // 登录框重置内容
-            var clearIcon = login.find('.clear-username'),
+            search.find('button.search').click(function(e){
+                // 执行搜素
+                // 发请求
+                e.preventDefault();
+                var result = {
+                    code: 11929333,
+                    success: true,
+                    times: 1
+                };
+                // var result = {
+                //     code: 119293233,
+                //     success: true,
+                //     times: 12
+                // };
+                // var result = {
+                //     code: 11929333,
+                //     success: false,
+                //     times: 1
+                // };
+                showPopup(result);
+            });
+
+            popUp.find('.close').click(function(e){
+                e.preventDefault();
+                $.modal.close();
+            });
+
+            function showPopup(o){
+                var className = 'search-popup-';
+                if(!o.success){
+                    // 查询错误
+                    className += 'error';
+                }else if(o.times === 1){
+                    // 正确，第一次
+                    className += 'success';
+                }else{
+                    // 正确，多次
+                    className += 'warning';
+                }
+                popUp.find('.code').html(o.code);
+                popUp.find('.times').html(o.times);
+                popUp
+                    .removeClass('search-popup-error search-popup-success search-popup-warning')
+                    .addClass(className)
+                    .modal({
+                        fadeDuration: 100
+                    });
+            }
+
+        },
+
+        // 登录框
+        login: function(){
+            var login = $('#login'),
+                clearIcon = login.find('.clear-username'),
                 usernameInput = login.find('.username-input');
             usernameInput.on('keydown', function() {
                 var val = usernameInput.val();

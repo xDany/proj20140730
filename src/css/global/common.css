@@ -64,3 +64,10 @@ button{
     background-position: center 0;
     background-repeat: no-repeat;
 }
+.modal{
+    z-index: 20 !important;
+}
+.jquery-modal{
+    z-index: 15 !important;
+    opacity: 0.4 !important;
+}

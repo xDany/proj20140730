@@ -1,0 +1,36 @@
+#search-popup.search-popup
+    .error
+        h2 您所输入的防伪码不存在
+        .code
+        .notice
+            | 谨防假冒，请核对后重新输入，并请拨打咨询热线123456
+            br
+            | 谢谢您的使用
+        .tip 请点击下面的我要投诉，以保护自身的合法权益
+        .footer
+            a.action(href="complain.html") 我要投诉
+            a.close(href="#") 返回上一级
+
+    .success
+        h2 您的防伪码为智溯官方正品码
+        .code
+        .search-times 您所查询的防伪码是第1次查询
+        .footer
+            a.action(href="product-info.html") 查看产品详细信息
+            a.close(href="#") 返回上一级
+
+    .warning
+        h2 您的防伪码为智溯官方正品码
+        .code
+        .search-times
+            | 您所查询的防伪码已被查询
+            span.times
+            | 次
+        .tip.warning
+            | 若
+            span.times
+            | 次查询非您个人所为，请拨打投诉热线123456
+        .footer
+            a.action(href="product-info.html") 查看产品详细信息
+            a.close(href="#") 返回上一级
+

@@ -3,12 +3,20 @@
  * 产品信息
  */
 
-require(['jquery', 'tabs'], function($, tabs) {
+require([
+    'jquery',
+    'tabs',
+    'gallery'
+    ], function($) {
     'use strict';
 
     var func = {
         initTabs: function(){
             $('.prod-module').tabs();
+        },
+
+        initGallery: function(){
+            $('.gallery').gallery();
         }
     };
 

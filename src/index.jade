@@ -2,6 +2,7 @@ doctype html
 html(lang="zh_CN")
     head
         include include/global-head
+        link(rel="stylesheet", href="css/module/jquery.modal.css")
         link(rel="stylesheet", href="css/page/index.css")
         title 主页
     body
@@ -88,6 +89,7 @@ html(lang="zh_CN")
                                                 a(href="#") 消费品
                                         .more
                                             a(href="#") more&gt;&gt;
+            include include/search-popup
             include include/footer
         include include/global-js
         script(src="js/page/index.js")

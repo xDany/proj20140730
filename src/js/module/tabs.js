@@ -3,11 +3,11 @@
  * jquery tabs 插件
  */
 
-define(['jquery'], function($){
+define(['jquery'], function($) {
     'use strict';
 
     $.fn.extend({
-        tabs: function(config){
+        tabs: function(config) {
             var defaultConfig = {
                 eventType: 'mouseenter',
                 titleSelector: '.tab-t',
@@ -25,11 +25,11 @@ define(['jquery'], function($){
                 timer,
                 toLeave;
 
-            if(title.length !== box.length){
+            if (title.length !== box.length) {
                 return;
             }
 
-            function setTab(curTitle){
+            function setTab(curTitle) {
                 var index = curTitle.index(),
                     curBox = box.eq(index);
                 title.removeClass(currentClass);
@@ -38,21 +38,21 @@ define(['jquery'], function($){
                 curBox.show();
             }
 
-            if(eventType === 'mouseenter.tabs'){
-                title.on(eventType, function(){
+            if (eventType === 'mouseenter.tabs') {
+                title.on(eventType, function() {
                     var $this = $(this);
                     toLeave = $this.index();
-                    timer = setTimeout(function(){
+                    timer = setTimeout(function() {
                         setTab($this);
                     }, 200);
-                }).on('mouseleave.tabs', function(){
-                    if(timer && toLeave === $(this).index()){
+                }).on('mouseleave.tabs', function() {
+                    if (timer && toLeave === $(this).index()) {
                         clearTimeout(timer);
                         timer = null;
                     }
                 });
-            }else{
-                title.on(eventType, function(e){
+            } else {
+                title.on(eventType, function(e) {
                     e.preventDefault();
                     setTab($(this));
                 });

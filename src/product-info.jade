@@ -3,7 +3,7 @@ html(lang="zh_CN")
     head
         include include/global-head
         link(rel="stylesheet", href="css/page/product-info.css")
-        title 主页
+        title 产品信息
     body
         #page
             include include/topbar
@@ -45,6 +45,20 @@ html(lang="zh_CN")
                                             li 原料批次
                                             li 入库时间
                                 .gallery
+                                    a.arrow.arrow-l(href="#")
+                                    .gallery-wrap
+                                        ul.clr
+                                            li
+                                                img(src="images/test-gallery1.png", alt="")
+                                             li
+                                                img(src="images/test-gallery2.png", alt="")
+                                             li
+                                                img(src="images/test-gallery3.png", alt="")
+                                             li
+                                                img(src="images/test-gallery4.png", alt="")
+                                             li
+                                                img(src="images/test-gallery5.png", alt="")
+                                    a.arrow.arrow-r(href="#")
 
             include include/footer
         include include/global-js
