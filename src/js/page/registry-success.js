@@ -3,7 +3,7 @@
  * 注册成功
  */
 
-require(['jquery',], function($) {
+require(['jquery'], function($) {
     'use strict';
 
     var func = {
@@ -38,7 +38,6 @@ require(['jquery',], function($) {
             }
 
             form.submit(function(){
-                console.log(validate());
                 return validate();
             });
             input.blur(validate);
