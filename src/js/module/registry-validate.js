@@ -372,9 +372,11 @@ define(['jquery'], function($) {
         var agree = $('#agree'),
             submitButton = container.find('.submit');
         agree.on('change', function(){
-            agree.prop('checked') ?
-                submitButton.prop('disabled', false).removeClass('submit-disabled')
-                : submitButton.prop('disabled', true).addClass('submit-disabled');
+            if(agree.prop('checked')){
+                submitButton.prop('disabled', false).removeClass('submit-disabled');
+            }else{
+                submitButton.prop('disabled', true).addClass('submit-disabled');
+            }
         });
 
         // 点击提交按钮的校验

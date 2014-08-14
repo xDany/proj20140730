@@ -15,7 +15,7 @@ define(['jquery'], function($) {
                 arrRightSelector: '.arrow-r',
                 scrollNum: 1
             };
-            var config = $.extend(defaultConfig, config);
+            config = $.extend(defaultConfig, config);
             var container = $(this),
                 list = container.find(config.listSelector),
                 item = container.find(config.itemSelector),

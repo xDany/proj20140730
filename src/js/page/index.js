@@ -37,7 +37,7 @@ require([
             $(window).resize(function(){
                 banner.find('.slidesjs-pagination').css({
                     'padding-left': ($(window).width() - banner.find('.slidesjs-pagination').width()) / 2
-                })
+                });
             });
         },
 
@@ -154,7 +154,7 @@ require([
                         .prop('disabled', false)
                         .removeClass('disabled');
                 }
-            }
+            };
 
             window.gt_custom_ajax = gt_custom_ajax;
         }
