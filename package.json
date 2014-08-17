@@ -10,7 +10,6 @@
     "gulp": "~3.8.6",
     "gulp-clean": "^0.3.1",
     "gulp-concat": "^2.3.4",
-    "gulp-html-prettify": "0.0.1",
     "gulp-imagemin": "^0.6.2",
     "gulp-jade": "~0.7.0",
     "gulp-jshint": "^1.8.3",

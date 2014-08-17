@@ -6,15 +6,15 @@ var jshint     = require('gulp-jshint');
 var minifycss  = require('gulp-minify-css');
 var concat     = require('gulp-concat');
 var uglify     = require('gulp-uglify');
-var prettify   = require('gulp-html-prettify');
+// var prettify   = require('gulp-html-prettify');
 var livereload = require('gulp-livereload');
 var imagemin   = require('gulp-imagemin');
 
 // 编译jade
 gulp.task('templates', function() {
     gulp.src(['src/*.jade'])
-        .pipe(jade())
-        .pipe(prettify({indent_char: ' ', indent_size: 4}))
+        .pipe(jade({pretty: true}))
+        // .pipe(prettify({indent_char: ' ', indent_size: 4}))
         .pipe(gulp.dest('src/'));
 });
 
