@@ -1,0 +1,76 @@
+doctype html
+html(lang="zh_CN")
+    head
+        include include/global-head
+        link(rel="stylesheet", href="css/page/complain.css")
+        title 我要投诉
+    body
+        #page
+            include include/topbar
+            - var currentNav = "首页"
+            include include/header
+            #banner.banner-common
+            #content
+                .layout
+                    .screen
+                        .complain-module
+                            .header
+                                h1 输入您的购买信息，以维护您的合法权益。谢谢您的配合！
+                            .content
+                                form(action="")
+                                    h2 您的信息
+                                    .clr
+                                        .left-col
+                                            label
+                                                em *&nbsp;
+                                                | 姓名：
+                                            input(type="text", id="name", name="name", required="required")
+                                        .right-col
+                                            label
+                                                em *&nbsp;
+                                                | 联系电话：
+                                            input(type="text", id="phone", name="phone", required="required")
+                                    h2 产品及标签信息
+                                    .clr
+                                        .left-col
+                                            label
+                                                em *&nbsp;
+                                                | 您查询的防伪码：
+                                            input(type="text", id="code", name="code", required="required")
+                                        .right-col
+                                            label 该产品生产厂家：
+                                            input(type="text", id="manufacturer", name="manufacturer")
+                                        .left-col
+                                            label
+                                                em *&nbsp;
+                                                | 该产品名称：
+                                            input(type="text", id="productName", name="productName", required="required")
+                                        .right-col
+                                    h2 购买信息
+                                    .clr
+                                        .left-col
+                                            label
+                                                em *&nbsp;
+                                                | 店名：
+                                            input(type="text", id="shop", name="shop", required="required")
+                                        .right-col
+                                            label 商店联系方式：
+                                            input(type="text", id="shopContact", name="shopContact")
+                                        .left-col
+                                            label
+                                                em *&nbsp;
+                                                | 购买地点：
+                                            input(type="text", id="location", name="location", required="required")
+                                        .right-col
+                                            label 购买时间：
+                                            input(type="text", id="time", name="time")
+                                        .des
+                                            label 产品相关描述：
+                                            textarea(id="description", name="description")
+                                    .clr.button-wrap
+                                        button#submit.itrace-button(type="submit") 确认
+                                        button#cancel.itrace-button 取消
+                                    .validate-info.validate-info-phone 请填写正确地电话/手机号码
+            include include/footer
+        include include/global-js
+        script(src="js/page/complain.js")

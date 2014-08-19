@@ -1,0 +1,56 @@
+doctype html
+html(lang="zh_CN")
+    head
+        include include/global-head
+        link(rel="stylesheet", href="css/module/detail.css")
+        link(rel="stylesheet", href="css/page/product-center.css")
+        title 产品中心-软件
+    body
+        #page
+            include include/topbar
+            - var currentNav = "产品中心"
+            include include/header
+            #banner.banner-common
+            #content
+                .layout
+                    .screen
+                        .crumb
+                            a(href="index.html") 首页
+                            | &nbsp;&gt;&nbsp;
+                            a(href="#") 产品中心
+                            | &nbsp;&gt;&nbsp;
+                            a(href="productcenter-software.html") 软件
+                        - var currentDetailNav = "软件"
+                        include include/product-nav
+                        .detail-content
+                            .product
+                                .summary
+                                    img(src="images/productcenter-software.jpg", alt="")
+                                    ul.info
+                                        li 有品牌维护及提升需求
+                                        li 要逼退仿冒伪造产品
+                                        li 欲规范销售渠道、杜绝窜货行为
+                                        li 无预算或无IT基础，建设整套防伪溯源系统
+                                    .button
+                                        button.view-detail
+                                        button.hide-detail
+                                .detail
+                                    .middle
+                                        dl
+                                            dt 可选服务范围
+                                            dd 各类Web软件的开发
+                                            dd 基于Windows或Linux办公自动化系统的开发
+                                            dd 基于Android客户端的系统开发
+                                            dd 各类系统集成解决方案
+                                        dl
+                                            dt 服务流程
+                                            dd 提出需求：详尽的需求是软件开发成功的先决条件，您可以通过在线咨询或电子邮件向我们提出您的定制需求
+                                            dd 需求确认：我们将与您通过网络、电话或面谈沟通需求，对需求进行分析、整理，形成软件开发文档并确认
+                                            dd 项目立项：双方签订合同，您完成预付款支付后，项目将会正式立项，进入软件开发阶段
+                                            dd 软件开发：我们投入人力与物力在开发周期内为您进行开发，您可以通过项目监控随时了解进度
+                                            dd 软件试用：我们在完成软件的主体开发并内部测试通过后，会提交给您试用，并对试用过程的问题进行解决
+                                            dd 验收完成：用户对产品最终功能确认满意后，签署软件开发验收单，完成余款支付后，我们会移交正式软件版本给您
+                                            dd 后续服务：我们为您提供长期技术支持，并提供后续服务（含免费服务与收费服务）
+            include include/footer
+        include include/global-js
+        script(src="js/page/product-center.js")

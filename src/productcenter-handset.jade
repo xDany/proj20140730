@@ -1,0 +1,71 @@
+doctype html
+html(lang="zh_CN")
+    head
+        include include/global-head
+        link(rel="stylesheet", href="css/module/detail.css")
+        link(rel="stylesheet", href="css/page/product-center.css")
+        title 产品中心-手持机
+    body
+        #page
+            include include/topbar
+            - var currentNav = "产品中心"
+            include include/header
+            #banner.banner-common
+            #content
+                .layout
+                    .screen
+                        .crumb
+                            a(href="index.html") 首页
+                            | &nbsp;&gt;&nbsp;
+                            a(href="#") 产品中心
+                            | &nbsp;&gt;&nbsp;
+                            a(href="productcenter-handset.html") 手持机
+                        - var currentDetailNav = "手持机"
+                        include include/product-nav
+                        .detail-content
+                            .product
+                                .summary
+                                    img(src="images/productcenter-handset.jpg", alt="")
+                                    ul.info
+                                        li 支持一维、二维条码、RFID扫描，完美融合Android的强大作业优势；
+                                        li 人性化的操作界面，电容式触摸屏，数据处理能力异常强大，IP54工业级别，高耐用、高可靠性。
+                                        li 主要应用在会员卡管理、资产管理、门禁管理、身份管理等安全性要求较高的领域。
+                                    .button
+                                        button.view-detail
+                                        button.hide-detail
+                                .detail
+                                    .left
+                                        p CPU：Qualcomm MSM8625 1.2GHz 
+                                        p 内存：Mobile DDR 4Gbits(512MB) 
+                                        p 存储器（内置）：MLC NAND Flash 4GB
+                                        p 外置：Micro SD
+                                        p 扩展，最大支持到32GB 
+                                        p LCD显示屏：4.3寸TFT（800×480）全视角高清
+                                        p 触摸屏：电容屏(支持5点触控) 
+                                        p 按键：19 Keys(含左右两侧按键) 接口：USB 2.0
+                                        p 电源：外接DC 5V，兼容标准USB直接充电
+                                        p 电池：3200mAH 锂电池
+                                        p WIFI：802.11b/802.11g/802.11n 
+                                        p 蓝牙：支持2.0及以上 
+                                        p GPS:内置GPS，支持A-GPS
+                                        p 3G:支持GSM，3G（EVDO,WCDMA可选）
+                                        p RFID读写功能:13.56mHz NFC
+                                        p 摄像头:500万像素 操作系统:Android 4.0
+                                        p 外形尺寸：147x77x22(mm)
+                                        p 工作温度：-10℃ ~ +50℃ 
+                                        p 工作湿度：20% ~ 90% 
+                                        p EMC：CE EN55022/24 & FCC Part 15B, RF (CE, FCC) 
+                                        p 工业等级：IP65 抗摔性：可承受1.2米高度多次跌落 
+                                    .right
+                                        p 电池续航能力：大于5天 
+                                        p 条码读取功能：
+                                        p 扫描引擎：标配1D Symbol SE955引擎（可选2D Symbol SE4500引擎）
+                                        p 光源：650 nm可视激光二极管
+                                        p 扫描距离：3- 51（厘米）@13 mil: 100% UPC - 90%PCS
+                                        p 最小解析度：4mil@ Code 39/ 2.5:1 - 80%PCS
+                                        p 扫描速率：104 (±) 12 次/秒（双向）
+                                        p 扫描角度：47°± 3°或/35°± 3°可调
+                                        p 支持码制：UPC/EAN/JAN, UPC-A & UPC-E, EAN-8 & EAN-13, JAN-8 & JAN-13, ISBN/ISSN, Code 39 (with full ASCII), Codabar (NW7), Code 128 & EAN 128, Code 93, Interleaved 2 of 5 (ITF), Addendum 2 of 5, IATA Code, MSI/Plessy, China Postal Code, Code 32(Italian Pharmacode), Industrial 2 of 5, Standard 2 of 5, Discrete 2 of 5 (DTF), Matrix 2 of 5 (JAP), Code 11, RSS 14, RSS Limited, RSS Expanded
+            include include/footer
+        include include/global-js
+        script(src="js/page/product-center.js")

@@ -1,0 +1,69 @@
+doctype html
+html(lang="zh_CN")
+    head
+        include include/global-head
+        link(rel="stylesheet", href="css/module/detail.css")
+        link(rel="stylesheet", href="css/page/product-center.css")
+        title 产品中心-工业照相机
+    body
+        #page
+            include include/topbar
+            - var currentNav = "产品中心"
+            include include/header
+            #banner.banner-common
+            #content
+                .layout
+                    .screen
+                        .crumb
+                            a(href="index.html") 首页
+                            | &nbsp;&gt;&nbsp;
+                            a(href="#") 产品中心
+                            | &nbsp;&gt;&nbsp;
+                            a(href="productcenter-camera.html") 工业照相机
+                        - var currentDetailNav = "工业照相机"
+                        include include/product-nav
+                        .detail-content
+                            .product
+                                .summary
+                                    img(src="images/productcenter-camera.jpg", alt="")
+                                    dl.info
+                                        dt 接口工业数字相机
+                                        dd 采用CCD/CMOS 作为传感器，图像质量高，颜色还原性好。
+                                        dd 以IEEE 1394B 作为输出，信号稳定，可通过外部信号触发采集或连续采集,广泛应用于工业生产线在线检测、智能交通，机器视觉，科研等众多领域。
+                                    .button
+                                        button.view-detail
+                                        button.hide-detail
+                                .detail
+                                    .left
+                                        p 数字面阵CCD 或CMOS 扫描，软件控制
+                                        p 图像窗口无级缩放
+                                        p 最大分辨率: 640×480
+                                        p 采集速度: 120、100、45、30、20、11 帧/秒
+                                        p 软件调整增益、对比度，外触发：
+                                        p 边缘曝光，电平曝光：
+                                        p 标准镜头接口: 支持数字信号外触发接口(可选)
+                                        p 可控电子快门，全局曝光，无需附加机械快门
+                                        p 驱动支持：WDM、VFW、DirectX、LabView、Halcon
+                                        p 开发包支持： VC、VB、C#, 支持Windows XP、Win7 开发环境
+                                    .right
+                                        p 最高分辨率 : 640×480
+                                        p 像素尺寸 : 5.6μmx5
+                                        p 传感器类型 : 逐行CCD 逐行CMOS
+                                        p 传感器光学尺寸 : 1/4
+                                        p 帧速率 : 120fps
+                                        p 数据位数 : 8/12
+                                        p 曝光方式 : 帧曝光行曝光
+                                        p 曝光时间 : 1/100000
+                                        p I/O 接口(可选) :  数字I/O 触发接口
+                                        p 镜头装配接口C/CS 接口
+                                        p 输出方式 : FireWire IEEE1394B
+                                        p 供电要求 : DC12V
+                                        p 同步方式外触发或连续采集
+                                        p 可编程控制图像尺寸、亮度、增益、帧率、曝光时间等
+                                        p 工作温度: -5°C 到45°C
+                                        p 存放温度: -20°C 到60°C
+                                        p 尺寸(长*宽*高) : 47*29*29(mm)
+                                        p 重量: 65g
+            include include/footer
+        include include/global-js
+        script(src="js/page/product-center.js")

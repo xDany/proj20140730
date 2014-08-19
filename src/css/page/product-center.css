@@ -1,0 +1,82 @@
+/**
+ * page/product-center.css
+ * 产品中心
+ */
+
+#banner{
+    background-image: url(../../images/banner-product.jpg);
+}
+
+.detail-content{
+    width: 700px;
+    padding: 28px 26px 0 32px;
+}
+.detail-content .summary:after,
+.detail-content .detail:after{
+    display: block;
+    overflow: hidden;
+    clear: both;
+    height: 0;
+    content: "\0020";
+}
+.detail-content .product{
+    margin-bottom: 56px;
+}
+.detail-content .summary img{
+    float: left;
+    margin-right: 52px;
+}
+.detail-content .summary .info{
+    padding: 20px 20px 0 0;
+    line-height: 30px;
+    letter-spacing: 1px;
+    color: #5d5d5d;
+    font-size: 16px;
+}
+.detail-content .summary dd{
+    font-size: 14px;
+    color: #868686;
+}
+.detail-content .summary .button{
+    margin-top: 10px;
+}
+.detail-content .summary button{
+    float: right;
+    width: 89px;
+    height: 31px;
+}
+.detail-content .summary .view-detail{
+    background: url(../../images/productcenter-view-detail.png);
+}
+.detail-content .summary .hide-detail{
+    display: none;
+    background: url(../../images/productcenter-hide-detail.png);
+}
+.detail-content .detail{
+    padding-top: 60px;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.4s;
+}
+.detail-content .detail p{
+    padding: 0;
+    text-indent: 0;
+    letter-spacing: 0;
+    color: #636363;
+    font-size: 14px;
+    line-height: 28px;
+}
+.detail-content .detail .left{
+    width: 340px;
+}
+.detail-content .detail .right{
+    width: 340px;
+}
+.detail-content .detail dl{
+    margin-bottom: 40px;
+    line-height: 32px;
+}
+.detail-content .detail dt{
+    font-size: 16px;
+    font-weight: bold;
+}

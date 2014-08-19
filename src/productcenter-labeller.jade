@@ -1,0 +1,57 @@
+doctype html
+html(lang="zh_CN")
+    head
+        include include/global-head
+        link(rel="stylesheet", href="css/module/detail.css")
+        link(rel="stylesheet", href="css/page/product-center.css")
+        title 产品中心-贴标机
+    body
+        #page
+            include include/topbar
+            - var currentNav = "产品中心"
+            include include/header
+            #banner.banner-common
+            #content
+                .layout
+                    .screen
+                        .crumb
+                            a(href="index.html") 首页
+                            | &nbsp;&gt;&nbsp;
+                            a(href="#") 产品中心
+                            | &nbsp;&gt;&nbsp;
+                            a(href="productcenter-labeller.html") 贴标机
+                        - var currentDetailNav = "贴标机"
+                        include include/product-nav
+                        .detail-content
+                            .product
+                                .summary
+                                    img(src="images/productcenter-labeller.jpg", alt="")
+                                    ul.info
+                                        li 适用于医药、食品、日化等行业的圆柱形包装容器的自动贴标
+                                    .button
+                                        button.view-detail
+                                        button.hide-detail
+                                .detail
+                                    .middle
+                                        dl
+                                            dt 主要用途
+                                            dd 适用于医药、食品、日化等行业的圆柱形包装容器的自动贴标
+                                            dd 更换配件也可用于正方形物体的四周贴标
+                                        dl
+                                            dt 功能特点
+                                            dd 智能参数设置：可自动智能设置预出标长度；可根据被贴物体的直径，自动智能设定贴标参数；
+                                                br
+                                                | &nbsp;&nbsp;自动智能匹配输送带、卷瓶带和贴标速度，最大程度地发挥机器的效率，大 dd 大减少了调整时间
+                                            dd 标签智能管理：标签快用完时会报警或停机
+                                            dd 贴标参数储存：预设50组贴标参数，变换瓶子时无须重新设定
+                                            dd 印字设备：可选配热转印、热烫印字机或喷码机，贴标同时完成打码
+                                            dd 自动检测：可增加机器视觉检测系统，自动检测打印的日期批号和贴标效果等
+                                        dl
+                                            dt 技术参数
+                                            dd 被物直径：20-90mm， 30-160mm
+                                            dd 贴标速度：100-250件/分钟（和被贴物直径及标签大小有关）
+                                            dd 贴标精度：±1.0mm（未计被贴物和标签本身误差）
+                                            dd 电源及功率：220VAC, 50/60HZ, 500W
+            include include/footer
+        include include/global-js
+        script(src="js/page/product-center.js")

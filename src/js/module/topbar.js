@@ -3,11 +3,11 @@
  * 顶部工具条
  */
 
-define(['jquery', 'browser'], function($, browser){
+define(['jquery', 'util'], function($, util){
     'use strict';
 
     $(function(){
-        if(browser.ie6){
+        if(util.browser.ie6){
             var map = $('#topbar .map');
             map.on({
                 mouseenter: function(){

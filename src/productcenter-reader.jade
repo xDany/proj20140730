@@ -1,0 +1,60 @@
+doctype html
+html(lang="zh_CN")
+    head
+        include include/global-head
+        link(rel="stylesheet", href="css/module/detail.css")
+        link(rel="stylesheet", href="css/page/product-center.css")
+        title 产品中心-读写器
+    body
+        #page
+            include include/topbar
+            - var currentNav = "产品中心"
+            include include/header
+            #banner.banner-common
+            #content
+                .layout
+                    .screen
+                        .crumb
+                            a(href="index.html") 首页
+                            | &nbsp;&gt;&nbsp;
+                            a(href="#") 产品中心
+                            | &nbsp;&gt;&nbsp;
+                            a(href="productcenter-reader.html") 读写器
+                        - var currentDetailNav = "读写器"
+                        include include/product-nav
+                        .detail-content
+                            .product
+                                .summary
+                                    img(src="images/productcenter-reader.jpg", alt="")
+                                    ul.info
+                                        li 基于集成芯片组技术，支持EPC C1 G2/ISO 18000-6C协议，RFID技术应用规定(试行)和美国FCC相关规定;
+                                        li 可广泛应用于需要快速读取速度、超强防碰撞性能、密集读写器环境、复杂组网通讯等功能的中高端应用场合。
+                                    .button
+                                        button.view-detail
+                                        button.hide-detail
+                                .detail
+                                    .middle
+                                        p 处理器：MARVELL PXA270处理器，主频520MHz
+                                        p 操作系统：Microsoft Windows Embedded CE 5.0/CE 6.0
+                                        p ROM：64MByte Nor Flash
+                                        p RAM：64M/128M/256M Byte Mobile SDRAM
+                                        p TFLASH卡座：支持4G/8G/16G等大容量TFLASH卡
+                                        p 屏幕：3.5英寸320x 240半透半返技术工业级TFT，并带有触摸屏功能
+                                        p 声音：Wolfson 多媒体芯片、集成扬声器、耳机接口，支持录音及回放
+                                        p 键盘：全数字键盘、5 功能导向键、快捷键、声音调节键等
+                                        p 通讯：标配RS232，USB HOST & Device蓝牙2.1、Class II 标准，802.11b/g
+                                            br
+                                            | &nbsp;&nbsp;选配GPRS/CDMA/3G/433 无线数传通讯模块
+                                        p GPS模块：可选内置GPS 模块
+                                        p 条码扫描：可选一维和PDF417激光Ⅱ类或一维和二维CMOS引擎
+                                        p RFID：集成RFID，可选ISO 14443 A/B、ISO 15693、ISO18000-6C
+                                        p 主电池：3400mAH/3.7V 聚合物锂电池，可更换
+                                        p 备用电池：内置1000mAH/3.7V 聚合物锂电池，不可更换
+                                        p 适配器：输入AC100～240、>0.5A、50～60Hz，输出5VDC±10%、2.0A
+                                        p 尺寸/重量：不含超高频RFID模块，150mm（长）x76mm（宽）x 30mm（厚）/400g （含电池）
+                                        p 温度：操作-20℃～55℃，存储-40℃~70℃
+                                        p 湿度：5%～95% RH 非凝结状态
+                                        p 防护：IP65，完全保护从各个方向冲水及扬尘，防震动及碰撞；
+            include include/footer
+        include include/global-js
+        script(src="js/page/product-center.js")

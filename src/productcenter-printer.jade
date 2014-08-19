@@ -1,0 +1,106 @@
+doctype html
+html(lang="zh_CN")
+    head
+        include include/global-head
+        link(rel="stylesheet", href="css/module/detail.css")
+        link(rel="stylesheet", href="css/page/product-center.css")
+        title 产品中心-打印机
+    body
+        #page
+            include include/topbar
+            - var currentNav = "产品中心"
+            include include/header
+            #banner.banner-common
+            #content
+                .layout
+                    .screen
+                        .crumb
+                            a(href="index.html") 首页
+                            | &nbsp;&gt;&nbsp;
+                            a(href="#") 产品中心
+                            | &nbsp;&gt;&nbsp;
+                            a(href="productcenter-printer.html") 打印机
+                        - var currentDetailNav = "打印机"
+                        include include/product-nav
+                        .detail-content
+                            .product
+                                .summary
+                                    img(src="images/productcenter-printer1.jpg", alt="")
+                                    dl.info
+                                        dt Zebra ZM400条码打印机
+                                        dd 具有金属外壳、支持多语种打印的 ZM400 打印机是各类企业多功能、高速打印的理想之选。
+                                        dd 适用于：制造、运输、零售、卫生保健等带有复杂字符、图片、标志图并吞吐量要求较大的行业。
+                                    .button
+                                        button.view-detail
+                                        button.hide-detail
+                                .detail
+                                    .left
+                                        p 打印方式: 热敏/热转印
+                                        p 分辨率: 203 dpi
+                                        p 打印速度: 254 mm/s
+                                        p 打印宽度: 104 mm
+                                        p 最大打印长度: 3988 mm
+                                        p 标签宽度: 25-114 mm
+                                        p 标签厚度: 0.058-0.25 mm
+                                        p 碳带长度: 450000 mm
+                                        p 碳带宽度: 51-110 mm
+                                        p 内存: 16 MB DRAM，8 MB Flash，64 MB
+                                        p Factory-Installed On-Board Optional
+                                        p Flash (optional)
+                                        p 接口类型: RS-232C，IEEE 1284，USB 2.0
+                                    .right
+                                        p 字符集: IBM Code Page 850国际字符集
+                                        p 字体: 7种点阵字体，1种平滑向量字体
+                                        p 电源电压: 90-265VAC V
+                                        p 电源频率: 48-62 Hz Hz
+                                        p 工作温度:5-40 ℃
+                                        p 工作湿度: 20-85%
+                                        p 存储温度: -40-60 ℃
+                                        p 存储湿度: 5-85%
+                                        p 颜色: 灰色
+                                        p 重量: 15 kg
+                                        p 长度: 475 mm
+                                        p 宽度: 278 mm
+                                        p 高度: 338 mm
+
+                            .product
+                                .summary
+                                    img(src="images/productcenter-printer2.jpg", alt="")
+                                    dl.info
+                                        dt 工业条码机
+                                        dd 内建USB及全金属机身，适合各种恶劣的工作环境及大量打印需求。其32位RISC微处理器和内置的4MB FLASH memory和8MB SDRAM能保证运行的可靠性与稳定性。
+                                    .button
+                                        button.view-detail
+                                        button.hide-detail
+                                .detail
+                                    .left
+                                        p 列印方式：热转印/热敏
+                                        p 分辨率：203dpi（8点/mm）
+                                        p 最大列印宽度：104mm
+                                        p 最快列印速度：2~4 IPS(51~ 102 mm /s)
+                                        p 打印长度：1270 毫米
+                                        p 内存  ：8MB SRAM, 4MB FLASH ROM
+                                        p CUP：32位RISC微处理器
+                                        p 通信接口：RS-232C/IEEE 1284/USB2.0
+                                        p 体积：长418x宽250x高263mm
+                                        p 字符集：国际标准字符集
+                                        p 字体：5种内建文数字字体可从 0.049”~0.23”H (1.25 mm~6.0 mm)，所有字体皆可放大到24x 24
+                                        p 可下载soft fonts(up to 72 points)
+                                        p 图形：PPLA:PCX,BMP,IMG,HEX,GDI
+                                            br
+                                            | PPLB:PCX,Binary raster,GDI
+                                        p 条码  ：各种一维条码及MaxiCode，PDF417,Datamatrix二维条码纸张载体,连续或间距/成卷或风琴折/热感,铜板,布标/吊牌,标签和票据...等
+                                    .right
+                                        p 最大宽度: 4.6”(1117mm)
+                                        p 最小宽度: 1”(25mm)
+                                        p 厚度: 0.0025”-0.01”(0.0635mm-0.245mm)
+                                        p 最大外径: 8”(203mm)
+                                        p 轴心尺寸:内径1.5”及3.0”(38mm-76mm)
+                                        p 碳带  ：Wax，Wax/resin,Resin
+                                        p 碳带宽度: 2”, 4”
+                                        p 碳带直径: 3”(76mm)
+                                        p 碳带长度:最大1182”(360m)
+                                        p 轴心尺寸:轴心内径1”(25mm)
+            include include/footer
+        include include/global-js
+        script(src="js/page/product-center.js")

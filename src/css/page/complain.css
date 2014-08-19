@@ -1,0 +1,108 @@
+/**
+ * page/complain.css
+ * 投诉
+ */
+
+#banner{
+    background-image: url(../../images/banner-complain.jpg);
+}
+
+.complain-module{
+    height: 700px;
+    margin: 15px 0;
+    box-shadow: 0 0 20px #ccc;
+}
+.complain-module .header{
+    height: 60px;
+    line-height: 60px;
+    padding-left: 32px;
+    background: #329ed9;
+    color: #fff;
+    font-size: 18px;
+}
+
+.complain-module .content{
+    height: 620px;
+    padding: 20px 20px 0 46px;
+    background: #f7f7f7;
+    position: relative;
+}
+.complain-module .content h2{
+    height: 30px;
+    line-height: 30px;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+.complain-module .content .left-col,
+.complain-module .content .right-col{
+    height: 30px;
+    line-height: 30px;
+    margin-bottom: 20px;
+}
+.complain-module .content .left-col{
+    float: left;
+    width: 452px;
+}
+.complain-module .content .right-col{
+    float: right;
+    width: 452px;
+}
+.complain-module .content label{
+    float: left;
+    width: 120px;
+    padding-right: 5px;
+    text-align: right;
+}
+.complain-module .content input,
+.complain-module .content textarea{
+    float: left;
+    padding-left: 4px;
+    border: 1px solid #c8c8c8;
+    border-radius: 3px;
+    color: #333;
+}
+.complain-module .content input{
+    height: 28px;
+}
+.complain-module .content .left-col input{
+    width: 300px;
+}
+.complain-module .content .right-col input{
+    width: 274px;
+}
+.complain-module .content input.input-error{
+    border-color: #ce5c5a;
+}
+.complain-module .content textarea{
+    width: 736px;
+    height: 132px;
+}
+.complain-module .content em{
+    color: #fd5554;
+}
+.complain-module .content .button-wrap{
+    padding: 24px 0 0 186px;
+}
+.complain-module .content button{
+    width: 200px;
+    height: 38px;
+    float: left;
+    margin-right: 94px;
+    font-size: 18px;
+    border-radius: 3px;
+}
+.complain-module .validate-info{
+    position: absolute;
+    display: none;
+    width: 274px;
+    height: 28px;
+    line-height: 28px;
+    padding-left: 4px;
+    border: 1px solid #ce5c5a;
+    border-radius: 3px;
+    color: #ce5c5a;
+}
+.complain-module .validate-info-phone{
+    top: 100px;
+    right: 67px;
+}

@@ -1,0 +1,11 @@
+- var nav = {'软件': 'productcenter-software.html','打印机': 'productcenter-printer.html','电子标签': 'productcenter-rfid.html','读写器': 'productcenter-reader.html','工业照相机': 'productcenter-camera.html','贴标机': 'productcenter-labeller.html','手持机': 'productcenter-handset.html'}
+
+.detail-nav
+    ul
+        each val, key in nav
+            - if (currentDetailNav == key)
+                li
+                    a.current(href="#{val}") #{key}
+            - else
+                li
+                    a(href="#{val}") #{key}

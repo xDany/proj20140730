@@ -1,0 +1,58 @@
+doctype html
+html(lang="zh_CN")
+    head
+        include include/global-head
+        link(rel="stylesheet", href="css/module/detail.css")
+        link(rel="stylesheet", href="css/page/product-center.css")
+        title 产品中心-电子标签
+    body
+        #page
+            include include/topbar
+            - var currentNav = "产品中心"
+            include include/header
+            #banner.banner-common
+            #content
+                .layout
+                    .screen
+                        .crumb
+                            a(href="index.html") 首页
+                            | &nbsp;&gt;&nbsp;
+                            a(href="#") 产品中心
+                            | &nbsp;&gt;&nbsp;
+                            a(href="productcenter-rfid.html") 电子标签
+                        - var currentDetailNav = "电子标签"
+                        include include/product-nav
+                        .detail-content
+                            .product
+                                .summary
+                                    img(src="images/productcenter-rfid.jpg", alt="")
+                                    ul.info
+                                        li 采用特殊胶系可有效防止二次加温转移；
+                                        li 高精度蚀刻天线性能好，一致性高，制程良率高；即粘即用，一撕即毁的特性可有效防止标签。
+                                        li 主要应用领域：烟草、酒类、药品、化妆品、奶粉等高档商品的溯源及防伪。
+                                    .button
+                                        button.view-detail
+                                        button.hide-detail
+                                .detail
+                                    .middle
+                                        p 封装材料：各类易碎基材
+                                        p 协议标准：ISO14443A or B、ISO15693等
+                                        p 频    率：13.56MHz
+                                        p 芯    片：NXP、复旦等厂家系列高频芯片
+                                        p 产品尺寸：依客户要求定制
+                                        p 天线材料：铝蚀刻/铜蚀刻
+                                        p 产品厚度：140um±5 (不含芯片位)
+                                        p 性能参数：取决于标签尺寸、芯片类型、读写器功率、使用环境等
+                                        p 防    拆：易碎基材结合特有二次加温防转移技术，标签不可重复利用，即标签粘贴后一撕即毁不能再使用
+                                        p 标签赋码：根据应用要求对标签内容预写码
+                                        p 面标印刷：Logo、图文混版、条形码、变动二维码、流水码、版纹、各类油墨印刷等
+                                        p 标签工作温度：-25℃ ~ +75℃
+                                        p 标签存储温度：-40℃ ~ +80℃
+                                        p 标签防水：可有效防止水渍侵蚀（能抵刷洗）
+                                        p 使用年限：10年
+                                        p 数据有效期：读、写10万次
+                                        p 印刷信息稳定性：至少5年
+                                        p 包    装：1、纸芯直径76mm；2、每卷数量5000枚；（或按需分卷）3、出圈方向：芯片朝内；4、包装方式：分卷独立真空包装
+            include include/footer
+        include include/global-js
+        script(src="js/page/product-center.js")
