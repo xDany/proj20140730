@@ -20,12 +20,8 @@ html(lang="zh_CN")
                             a(href="#") 技术支持
                             | &nbsp;&gt;&nbsp;
                             a(href="download-doc.html") 文档下载
-                        .detail-nav
-                            ul
-                                li
-                                    a(href="download-soft.html") 软件下载
-                                li
-                                    a.current(href="download-doc.html") 文档下载
+                        - var currentDetailNav = "文档下载"
+                        include include/download-nav
                         .detail-content
                             .download-doc
                                 dl.doc-pdf

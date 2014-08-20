@@ -1,0 +1,26 @@
+/**
+ * page/solution.css
+ * 解决方案
+ */
+
+#banner{
+    background-image: url(../../images/banner-solution.jpg);
+}
+
+.detail-content{
+    width: 700px;
+    padding: 24px 30px 80px;
+}
+.detail-content p{
+    padding: 0;
+    margin-bottom: 20px;
+}
+.detail-content h2{
+    font-weight: bold;
+}
+.detail-content dl{
+    margin: 20px 0;
+}
+.detail-content dt{
+    font-weight: bold;
+}

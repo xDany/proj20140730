@@ -1,0 +1,11 @@
+- var nav = {'公司简介': 'about-company.html','ITTS平台': 'about-itts.html','企业专栏': '#', '联系我们': 'about-contact-us.html'}
+
+.detail-nav
+    ul
+        each val, key in nav
+            - if (currentDetailNav == key)
+                li
+                    a.current(href="#{val}") #{key}
+            - else
+                li
+                    a(href="#{val}") #{key}

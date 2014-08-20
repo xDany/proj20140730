@@ -1,0 +1,11 @@
+- var nav = {'软件下载': 'download-soft.html','文档下载': 'download-doc.html'}
+
+.detail-nav
+    ul
+        each val, key in nav
+            - if (currentDetailNav == key)
+                li
+                    a.current(href="#{val}") #{key}
+            - else
+                li
+                    a(href="#{val}") #{key}

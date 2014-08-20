@@ -20,16 +20,8 @@ html(lang="zh_CN")
                             a(href="#") 关于我们
                             | &nbsp;&gt;&nbsp;
                             a(href="about-contact-us.html") 联系我们
-                        .detail-nav
-                            ul
-                                li
-                                    a(href="about-company.html") 公司简介
-                                li
-                                    a(href="about-itts.html") ITTS平台
-                                li
-                                    a(href="#") 企业专栏
-                                li
-                                    a.current(href="about-contact-us.html") 联系我们
+                        - var currentDetailNav = "联系我们"
+                        include include/about-nav
                         .detail-content
                             .about-contact-us
                                 dl

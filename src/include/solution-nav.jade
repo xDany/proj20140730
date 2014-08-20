@@ -1,0 +1,11 @@
+- var nav = {'防伪溯源': 'solution-itts.html','资产管理': 'solution-assets.html','全生命周期管理': 'solution-life-cycle.html'}
+
+.detail-nav
+    ul
+        each val, key in nav
+            - if (currentDetailNav == key)
+                li
+                    a.current(href="#{val}") #{key}
+            - else
+                li
+                    a(href="#{val}") #{key}

@@ -1,0 +1,43 @@
+doctype html
+html(lang="zh_CN")
+    head
+        include include/global-head
+        link(rel="stylesheet", href="css/module/detail.css")
+        link(rel="stylesheet", href="css/page/solution.css")
+        title 解决方案-资产管理
+    body
+        #page
+            include include/topbar
+            - var currentNav = "解决方案"
+            include include/header
+            #banner.banner-common
+            #content
+                .layout
+                    .screen
+                        .crumb
+                            a(href="index.html") 首页
+                            | &nbsp;&gt;&nbsp;
+                            a(href="#") 解决方案
+                        - var currentDetailNav = "资产管理"
+                        include include/solution-nav
+                        .detail-content
+                            p
+                                | 资产管理系统运用RFID技术,使用RFID标签对固定资产进行标识，利用手持数据采集终端完成固定资产的日常管理和清查工作，从而高效地实现了对固定资产实物生命周期和使用状态的全程跟踪，从技术上最大限度的保证了资产的帐实相符，进而避免固定资产的流失，同时提高资产维护效率，从而实现固定资产的信息化管理。
+                            img(src="images/solution-assets.jpg", alt="")
+                            dl
+                                dt 系统实现
+                                dd 资产管理包括资产的新增、调拨、闲置、报废、维修、盘点等操作，它包含了设备从出厂投入使用到报废退出使用的全过程。
+                            dl
+                                dt 实施效益
+                                dd 1、提高工作效率（资产数据的统计、资产信息的查询）。
+                                dd 2、节约查询和登记工作成本。
+                                dd 3、减少管理信息的差错。
+                                dd 4、防止资产流失。
+                                dd 5、便于资产信息分类整理。
+                                dd 6、可以对偏远或资产较少的分公司实现与总部相同水平的监控。
+                                dd 7、提高资产利用率，降低运营成本。
+                            p 若需要进一步了解本方案，可安排交流和系统DEMO，请[
+                                a(href="about-contact-us.html") 联系我们
+                                | ]。
+            include include/footer
+        include include/global-js
