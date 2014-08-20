@@ -34,12 +34,6 @@ gulp.task('livereload', function(){
     });
 });
 
-// // 图片尺寸
-// gulp.task('imgsize', function() {
-//     gulp.src('src/images/*.*', {base: 'src'})
-//         .pipe(imgsize());
-// });
-
 // gulp.task('requirejs', function(){
 //     rjs({
 //         baseUrl: './js/page/index.js',
@@ -58,7 +52,7 @@ gulp.task('lint', function() {
             '!src/js/module/jquery.*.js'
         ])
         .pipe(jshint())
-        .pipe(jshint.reporter());
+        .pipe(jshint.reporter('jshint-stylish'));
 });
 
 // 清理build目录
