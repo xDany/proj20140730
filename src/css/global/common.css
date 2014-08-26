@@ -4,6 +4,7 @@
  */
 
 body{
+    min-width: 980px;
     font-family: "Microsoft YaHei";
     color: #787878;
 }
@@ -60,7 +61,7 @@ button{
 }
 .banner-common{
     height: 250px;
-    margin-bottom: 30px;
+    margin-bottom: 6px;
     background-position: center 0;
     background-repeat: no-repeat;
 }

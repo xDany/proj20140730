@@ -17,6 +17,7 @@
     height: 412px;
     width: 100%;
     display: none;
+    min-width: 980px;
 }
 #banner .back .back-item{
     width: 100%;

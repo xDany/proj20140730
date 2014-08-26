@@ -56,7 +56,7 @@ require([
 
             function updateContainerPos(){
                 formContainer
-                    .css('right', (win.width() - 980) / 2)
+                    .css('right', win.width() < 980 ? (win.width() - 980) : ((win.width() - 980) / 2))
                     .fadeIn();
             }
 
