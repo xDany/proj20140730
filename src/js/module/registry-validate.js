@@ -92,9 +92,8 @@ define(['jquery'], function($) {
                 },
                 beUsed: {
                     method: function(val, callback){
-                        // ajax here
-                        // test
-                        console.log('假装在发请求.........................');
+                        // 发请求
+                        // =========== 测试代码开始 ===========
                         setTimeout(function(){
                             if(val === 'used'){
                                 callback(false);
@@ -102,6 +101,7 @@ define(['jquery'], function($) {
                                 callback(true);
                             }
                         }, 1000);
+                        // =========== 测试代码结束 ===========
                     },
                     tip: '该用户名已被使用，请重新输入'
                 }

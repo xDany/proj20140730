@@ -11,6 +11,8 @@ require([
     ], function($) {
     'use strict';
 
+    var searchGeetest = false; // 搜索拖动验证
+
     var func = {
         // banner滚动
         slide: function() {
@@ -46,12 +48,10 @@ require([
             $('input, textarea').placeholder();
         },
 
-        // 搜索框
-        search: function() {
+        formInit: function(){
             var formContainer = $('#banner .front'),
                 search = $('#search'),
                 login = $('#login'),
-                popUp = $('#search-popup'),
                 win = $(window);
 
             function updateContainerPos(){
@@ -74,34 +74,59 @@ require([
                     search.hide();
                 }
             });
+        },
 
-            search.find('button.search').click(function(e){
-                // 执行搜素
-                // 发请求
-                e.preventDefault();
-                var result = {
-                    code: 11929333,
-                    success: true,
-                    times: 1
-                };
-                // var result = {
-                //     code: 119293233,
-                //     success: true,
-                //     times: 12
-                // };
-                // var result = {
-                //     code: 11929333,
-                //     success: false,
-                //     times: 1
-                // };
-                showPopup(result);
+        // 搜索框
+        search: function() {
+            var search = $('#search'),
+                popUp = $('#search-popup'),
+                searchInput = search.find('.search-input'),
+                errorTip = search.find('.error-tip');;
+
+            // 校验
+            search.find('.search').click(validate);
+            searchInput.keypress(function(e){
+                var code = e.keyCode || e.which;
+                if(code === 13){
+                    validate(e);
+                }
             });
 
+            // 浮层
             popUp.find('.close').click(function(e){
                 e.preventDefault();
                 $.modal.close();
             });
 
+            // 执行搜素
+            function doSearch(){
+                // 发请求
+                // =========== 测试代码开始 ===========
+                var result;
+                if(window.location.href.indexOf('type1') !== -1){
+                    result = {
+                        code: 11929333,
+                        success: true,
+                        times: 1
+                    };
+                }else if(window.location.href.indexOf('type2') !== -1){
+                    result = {
+                        code: 119293233,
+                        success: true,
+                        times: 12
+                    };
+                }else{
+                    result = {
+                        code: 11929333,
+                        success: false,
+                        times: 1
+                    };
+                }
+                // =========== 测试代码结束 ===========
+                showPopup(result);
+            }
+
+            // 显示浮层
             function showPopup(o){
                 var className = 'search-popup-';
                 if(!o.success){
@@ -124,14 +149,37 @@ require([
                     });
             }
 
+            // 校验函数
+            function validate(e){
+                e.preventDefault();
+                if(searchInput.val() === ''){
+                    showError('请输入智溯码');
+                    return false;
+                }
+                if(!searchGeetest){
+                    showError('请完成拖动验证');
+                    return false;
+                }
+                errorTip.hide();
+                doSearch();
+            }
+
+            function showError(msg){
+                errorTip.show().html(msg);
+            }
         },
 
         // 登录框
         login: function(){
             var login = $('#login'),
+                loginForm = login.find('form'),
                 clearIcon = login.find('.clear-username'),
-                usernameInput = login.find('.username-input');
-            usernameInput.on('keydown', function() {
+                usernameInput = login.find('.username-input'),
+                passwordInput = login.find('.password-input'),
+                errorTip = login.find('.error-tip');
+
+            // 清空
+            usernameInput.keypress(function() {
                 var val = usernameInput.val();
                 if (val !== '' && val !== usernameInput.attr('placeholder')) {
                     clearIcon.show();
@@ -143,17 +191,40 @@ require([
                 usernameInput.val('').focus();
                 clearIcon.hide();
             });
+
+            // 校验
+            login.find('.login').click(validate);
+            login.find('input').keypress(function(e){
+                var code = e.keyCode || e.which;
+                if(code === 13){
+                    validate(e);
+                }
+            });
+
+            function validate(e){
+                e.preventDefault();
+                if(usernameInput.val() === ''){
+                    showError('请输入用户名');
+                    return false;
+                }
+                if(passwordInput.val() === ''){
+                    showError('请输入密码');
+                    return false;
+                }
+                errorTip.hide();
+                loginForm.submit();
+            }
+
+            function showError(msg){
+                errorTip.show().html(msg);
+            }
         },
 
         // geetest验证
         // http://geetest.com/install/#api
         geetest: function(){
             var gt_custom_ajax = function(result, selector, message){
-                if(result){
-                    $('#search button.search')
-                        .prop('disabled', false)
-                        .removeClass('disabled');
-                }
+                searchGeetest = !!result;
             };
 
             window.gt_custom_ajax = gt_custom_ajax;
