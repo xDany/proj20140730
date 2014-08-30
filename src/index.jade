@@ -23,7 +23,7 @@ html(lang="zh_CN")
                         a.switch.switch-login(href="#")
                         .error-tip
                         form(action="#")
-                            legend 防伪查询
+                            h2 防伪查询
                             input.input-text.search-input(type="text",placeholder="请输入智溯码进行查询")
                             script(src="http://api.geetest.com/get.php?gt=e266eab79debb5bb3e85597bb6122f87")
                             button.search(type="submit") 查询
@@ -31,10 +31,11 @@ html(lang="zh_CN")
                         a.switch.switch-search(href="#")
                         .error-tip
                         form(action="index.html")
-                            legend 登录
+                            h2 登录
                             input.input-text.username-input(type="text",placeholder="用户名输入")
                             input.input-text.password-input(type="password",placeholder="密码输入")
                             span.clear-username
+                            //- script(src="http://api.geetest.com/get.php?gt=e266eab79debb5bb3e85597bb6122f88")
                             .operation.clr
                                 .left
                                     input.keep-login(type="checkbox")

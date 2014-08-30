@@ -24,19 +24,19 @@ html(lang="zh_CN")
                                             label
                                                 em *&nbsp;
                                                 | 姓名：
-                                            input(type="text", id="name", name="name", required="required")
+                                            input.required(type="text", id="name", name="name")
                                         .right-col
                                             label
                                                 em *&nbsp;
                                                 | 联系电话：
-                                            input(type="text", id="phone", name="phone", required="required")
+                                            input.required(type="text", id="phone", name="phone")
                                     h2 产品及标签信息
                                     .clr
                                         .left-col
                                             label
                                                 em *&nbsp;
                                                 | 您查询的防伪码：
-                                            input(type="text", id="code", name="code", required="required")
+                                            input.required(type="text", id="code", name="code")
                                         .right-col
                                             label 该产品生产厂家：
                                             input(type="text", id="manufacturer", name="manufacturer")
@@ -44,7 +44,7 @@ html(lang="zh_CN")
                                             label
                                                 em *&nbsp;
                                                 | 该产品名称：
-                                            input(type="text", id="productName", name="productName", required="required")
+                                            input.required(type="text", id="productName", name="productName")
                                         .right-col
                                     h2 购买信息
                                     .clr
@@ -52,7 +52,7 @@ html(lang="zh_CN")
                                             label
                                                 em *&nbsp;
                                                 | 店名：
-                                            input(type="text", id="shop", name="shop", required="required")
+                                            input.required(type="text", id="shop", name="shop")
                                         .right-col
                                             label 商店联系方式：
                                             input(type="text", id="shopContact", name="shopContact")
@@ -60,7 +60,7 @@ html(lang="zh_CN")
                                             label
                                                 em *&nbsp;
                                                 | 购买地点：
-                                            input(type="text", id="location", name="location", required="required")
+                                            input.required(type="text", id="location", name="location")
                                         .right-col
                                             label 购买时间：
                                             input(type="text", id="time", name="time")
@@ -70,7 +70,7 @@ html(lang="zh_CN")
                                     .clr.button-wrap
                                         button#submit.itrace-button(type="submit") 确认
                                         button#cancel.itrace-button 取消
-                                    .validate-info.validate-info-phone 请填写正确地电话/手机号码
+                                    .validate-info.validate-info-phone 请填写正确的电话/手机号码
             include include/footer
         include include/global-js
         script(src="js/page/complain.js")

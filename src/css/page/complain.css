@@ -62,7 +62,10 @@
     color: #333;
 }
 .complain-module .content input{
-    height: 28px;
+    height: 20px;
+    line-height: 20px;
+    padding-top: 4px;
+    padding-bottom: 4px;
 }
 .complain-module .content .left-col input{
     width: 300px;
@@ -70,8 +73,10 @@
 .complain-module .content .right-col input{
     width: 274px;
 }
-.complain-module .content input.input-error{
+.complain-module .content input.error{
     border-color: #ce5c5a;
+    color: #ce5c5a;
+    background: #fff url(../../images/icon-fail.png) no-repeat right -7px;
 }
 .complain-module .content textarea{
     width: 736px;

@@ -91,7 +91,7 @@
     top: 0;
     right: 0;
 }
-#banner .form legend{
+#banner .form h2{
     font-size: 24px;
     color: #fff;
 }
@@ -211,7 +211,8 @@
     height: 520px;
     transition: all 0.4s;
 }
-.func li:hover .func-box{
+.func li:hover .func-box,
+.func .func-box-hover{
     margin-top: -260px;
 }
 .func .icon{

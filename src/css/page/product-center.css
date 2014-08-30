@@ -53,6 +53,7 @@
     background: url(../../images/productcenter-hide-detail.png);
 }
 .detail-content .detail{
+    clear: both;
     padding-top: 60px;
     height: 0;
     overflow: hidden;

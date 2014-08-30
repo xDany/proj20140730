@@ -228,6 +228,16 @@ require([
             };
 
             window.gt_custom_ajax = gt_custom_ajax;
+        },
+
+        // for bug #17
+        bottomFunc: function(){
+            $('.func').on('focus', 'a', function(){
+                $(this).closest('.func-box').addClass('func-box-hover')
+            });
+            $('.func-box').mouseleave(function(){
+                $(this).removeClass('func-box-hover');
+            });
         }
     };
 

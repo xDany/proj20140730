@@ -11,6 +11,8 @@
 .reg-content{
     height: 390px;
     padding: 140px 80px 0 180px;
+    font-size: 14px;
+    line-height: 26px;
     background: #f8f8f8 url(../../images/reg-success.png) no-repeat center 0;
 }
 
@@ -35,25 +37,27 @@
     font-size: 20px;
 }
 .success p{
-    font-size: 14px;
-    line-height: 26px;
     margin-bottom: 20px;
 }
 .success p .send-again{
     color: #39ae36;
 }
-.success .login-email{
-    display: block;
+.success .button{
+    float: left;
     width: 90px;
     height: 24px;
     line-height: 24px;
     font-size: 14px;
 }
 
+.success-mobile form{
+    line-height: 24px;
+}
 .success-mobile .input{
+    float: left;
     width: 253px;
     height: 22px;
-    padding: 11px 38px 10px 9px;
+    padding: 1px 4px;
     margin-right: 10px;
     font-size: 14px;
     line-height: 22px;
@@ -64,18 +68,8 @@
     border-color: #ce5c5a;
 }
 .success-mobile .submit{
-    width: 80px;
-    height: 23px;
-    line-height: 22px;
-    text-align: center;
-    font-size: 14px;
-    border: 1px solid #3695ca;
-    color: #3695ca;
-    background: #f8f8f8;
+    margin-right: 4px;
 }
-.success-mobile .submit:hover,
-.success-mobile .submit:active{
-    color: #4fafe4;
-}
+
 
 

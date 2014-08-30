@@ -70,16 +70,24 @@ define(['jquery'], function($) {
                 if(cssSupport('transform') && supportTransition){
                     return;
                 }
+                var timer;
                 container.find('img').on({
                     mouseenter: function(){
-                        $(this).animate({
-                            width: 240,
-                            height: 360,
-                            marginLeft: -45,
-                            marginTop: -75
-                        });
+                        var $this = $(this);
+                        timer = setTimeout(function(){
+                            $this.animate({
+                                width: 240,
+                                height: 360,
+                                marginLeft: -45,
+                                marginTop: -75
+                            });
+                            clearTimeout(timer);
+                            timer = null;
+                        }, 300);
                     },
                     mouseleave: function(){
+                        clearTimeout(timer);
+                        timer = null;
                         $(this).animate({
                             width: 150,
                             height: 210,
