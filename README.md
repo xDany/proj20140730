@@ -10,4 +10,4 @@ A Web Project
 注意
 ---
 * `images/content/`中以`test`开头的图片都是开发测试图片，上线前应该用实际图片替换掉
-* 测试时，首页防伪查询的结果在URL中干预：URL中带`type1`（如`http://host/index.html?type1`），查询结果为正确，首次查询；URL中带`type2`，查询结果为正确，多次查询；URL中不带`type1`或`type2`，查询结果为错误
+* 测试时，首页防伪查询的结果可以在URL中干预：URL中带`type1`（如http://host/index.html?type1），查询结果为正确，首次查询；URL中带`type2`，查询结果为正确，多次查询；URL中不带`type1`或`type2`，查询结果为错误
