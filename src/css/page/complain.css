@@ -4,7 +4,7 @@
  */
 
 #banner{
-    background-image: url(../../images/banner-complain.jpg);
+    background-image: url(../../images/banner/banner-complain.jpg);
 }
 
 .complain-module{
@@ -76,7 +76,7 @@
 .complain-module .content input.error{
     border-color: #ce5c5a;
     color: #ce5c5a;
-    background: #fff url(../../images/icon-fail.png) no-repeat right -7px;
+    background: #fff url(../../images/background/icon-fail.png) no-repeat right -7px;
 }
 .complain-module .content textarea{
     width: 736px;

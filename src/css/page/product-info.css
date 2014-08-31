@@ -4,7 +4,7 @@
  */
 
 #banner{
-    background-image: url(../../images/banner-product.jpg);
+    background-image: url(../../images/banner/banner-product.jpg);
 }
 
 .prod-module{
@@ -80,11 +80,11 @@
 }
 .prod-module .gallery .arrow-l{
     left: 44px;
-    background: url(../../images/arrow-left.png);
+    background: url(../../images/background/arrow-left.png);
 }
 .prod-module .gallery .arrow-r{
     right: 44px;
-    background: url(../../images/arrow-right.png);
+    background: url(../../images/background/arrow-right.png);
 }
 .prod-module .gallery-wrap{
     width: 744px;

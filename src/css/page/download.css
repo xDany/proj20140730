@@ -4,7 +4,7 @@
  */
 
 #banner{
-    background-image: url(../../images/banner-support.jpg);
+    background-image: url(../../images/banner/banner-support.jpg);
 }
 
 .download-soft{
@@ -53,7 +53,7 @@
     padding: 18px 0 0 108px;
 }
 .download-doc .doc-pdf{
-    background: url(../../images/icon-pdf.png) no-repeat left 36px;
+    background: url(../../images/background/icon-pdf.png) no-repeat left 36px;
 }
 .download-doc dt{
     font-size: 16px;

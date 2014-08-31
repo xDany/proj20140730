@@ -6,7 +6,7 @@
 .reg-header{
     margin-top: 46px;
     height: 42px;
-    background: url(../../images/reg-welcome.png) no-repeat;
+    background: url(../../images/background/reg-welcome.png) no-repeat;
 }
 .reg-header .login{
     float: right;
@@ -141,18 +141,18 @@
     background: #ccc;
 }
 #regName{
-    background-image: url(../../images/icon-user.png);
+    background-image: url(../../images/background/icon-user.png);
 }
 #pwd,
 #pwdRepeat{
-    background-image: url(../../images/icon-password.png);
+    background-image: url(../../images/background/icon-password.png);
 }
 .reg-content .input.success{
-    background-image: url(../../images/icon-success.png) !important;
+    background-image: url(../../images/background/icon-success.png) !important;
 }
 .reg-content .input.error{
     border-color: #ce5c5a;
-    background-image: url(../../images/icon-fail.png) !important;
+    background-image: url(../../images/background/icon-fail.png) !important;
 }
 #pwd-lvl{
     position: absolute;
@@ -228,6 +228,6 @@
     right: 0;
     width: 30px;
     height: 26px;
-    background: url(../../images/agreement-close.png);
+    background: url(../../images/background/agreement-close.png);
 }
 
