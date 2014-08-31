@@ -1,6 +1,6 @@
 /*! http://mths.be/placeholder v2.0.8 by @mathias */
 
-define(['jquery'], function($){
+define(['jquery'], function(jQuery){
 
 ;(function(window, document, $) {
 

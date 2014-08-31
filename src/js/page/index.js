@@ -81,7 +81,7 @@ require([
             var search = $('#search'),
                 popUp = $('#search-popup'),
                 searchInput = search.find('.search-input'),
-                errorTip = search.find('.error-tip');;
+                errorTip = search.find('.error-tip');
 
             // 校验
             search.find('.search').click(validate);
@@ -233,7 +233,7 @@ require([
         // for bug #17
         bottomFunc: function(){
             $('.func').on('focus', 'a', function(){
-                $(this).closest('.func-box').addClass('func-box-hover')
+                $(this).closest('.func-box').addClass('func-box-hover');
             });
             $('.func-box').mouseleave(function(){
                 $(this).removeClass('func-box-hover');

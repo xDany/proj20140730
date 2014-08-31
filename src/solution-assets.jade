@@ -3,6 +3,7 @@ html(lang="zh_CN")
     head
         include include/global-head
         link(rel="stylesheet", href="css/module/detail.css")
+        link(rel="stylesheet", href="css/module/jquery.fancybox.css")
         link(rel="stylesheet", href="css/page/solution.css")
         title 解决方案-资产管理
     body
@@ -25,7 +26,8 @@ html(lang="zh_CN")
                         .detail-content
                             p
                                 | 资产管理系统运用RFID技术,使用RFID标签对固定资产进行标识，利用手持数据采集终端完成固定资产的日常管理和清查工作，从而高效地实现了对固定资产实物生命周期和使用状态的全程跟踪，从技术上最大限度的保证了资产的帐实相符，进而避免固定资产的流失，同时提高资产维护效率，从而实现固定资产的信息化管理。
-                            img(src="images/content/solution-assets.jpg", alt="")
+                            a.fancybox(href="images/content/test-solution-assets-big.jpg", title="资产管理系统")
+                                img(src="images/content/solution-assets.jpg", alt="")
                             dl
                                 dt 系统实现
                                 dd 资产管理包括资产的新增、调拨、闲置、报废、维修、盘点等操作，它包含了设备从出厂投入使用到报废退出使用的全过程。
@@ -43,3 +45,4 @@ html(lang="zh_CN")
                                 | ]。
             include include/footer
         include include/global-js
+        script(src="js/page/solution.js")

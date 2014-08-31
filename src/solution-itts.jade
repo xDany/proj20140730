@@ -3,6 +3,7 @@ html(lang="zh_CN")
     head
         include include/global-head
         link(rel="stylesheet", href="css/module/detail.css")
+        link(rel="stylesheet", href="css/module/jquery.fancybox.css")
         link(rel="stylesheet", href="css/page/solution.css")
         title 解决方案-防伪溯源
     body
@@ -25,7 +26,8 @@ html(lang="zh_CN")
                         .detail-content
                             p
                                 | ITTS防伪溯源系统致力于打造一个安全的产品流通销售管理平台。防伪功能子系统使产品可被便捷的查证真伪，产品溯源功能使整个产品生产流通信息披露安全透明，防窜货功能使厂家能全面的了解产品的流向以掌控整个渠道，最终实现厂家对产品下线后整个流通销售的全面控制，增进企业核心竞争力。
-                            img(src="images/content/solution-itts.jpg", alt="")
+                            a.fancybox(href="images/content/test-solution-itts-big.jpg", title="ITTS防伪溯源系统")
+                                img(src="images/content/solution-itts.jpg", alt="")
                             dl
                                 dt 实施效益
                                 dd 1、杜绝假冒产品流入销售市场
@@ -40,3 +42,4 @@ html(lang="zh_CN")
                                     | ]。
             include include/footer
         include include/global-js
+        script(src="js/page/solution.js")

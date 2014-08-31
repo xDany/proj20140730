@@ -3,7 +3,4 @@
  * 全局js
  */
 
-require(['topbar', 'header'], function(){
-
-
-});
+require(['topbar', 'header']);

@@ -3,6 +3,7 @@ html(lang="zh_CN")
     head
         include include/global-head
         link(rel="stylesheet", href="css/module/detail.css")
+        link(rel="stylesheet", href="css/module/jquery.fancybox.css")
         link(rel="stylesheet", href="css/page/solution.css")
         title 解决方案-全生命周期管理
     body
@@ -26,7 +27,8 @@ html(lang="zh_CN")
                             p
                                 | 产品全生命周期管理系统使用RFID技术，为每件产品配备一个全球唯一ID号的电子标签，全程管理从产品的生产、采购、仓储、销售全生命周期。系统包括：生产、采购、仓储、销售管理子系统；有利于整合企业资产管理流程，统一数据源，实现生产、采购、仓储、销售等业务的无缝集成，大幅提高产品管理效率和效益。
                             h2 以服装行业为例：
-                            img(src="images/content/solution-life-cycle.jpg", alt="")
+                            a.fancybox(href="images/content/test-solution-life-cycle-big.jpg", title="产品全生命周期管理")
+                                img(src="images/content/solution-life-cycle.jpg", alt="")
                             dl
                                 dt 系统优势
                                 dd 有效进行工厂监控，
@@ -39,3 +41,4 @@ html(lang="zh_CN")
                                 | ]。
             include include/footer
         include include/global-js
+        script(src="js/page/solution.js")
