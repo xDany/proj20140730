@@ -134,6 +134,9 @@
     display: none;
     background-image: url(../../images/background/login.png);
 }
+#login.with-captcha{
+    height: 308px;
+}
 #login .input-text{
     width: 225px;
     padding-left: 5px;
@@ -156,10 +159,11 @@
     display: none;
 }
 #login .operation{
+    clear: both;
     width: 230px;
     height: 14px;
     line-height: 14px;
-    margin-top: 14px;
+    padding-top: 14px;
     color: #fff;
 }
 #login .keep-login{
@@ -192,9 +196,9 @@
     background: #fff url(../../images/background/icon-fail.png) no-repeat left -5px;
 }
 #search .error-tip{
-    left: 10px;
+    left: 18px;
     top: 36px;
-    width: 216px;
+    width: 224px;
 }
 
 /*底部功能区块*/
@@ -276,7 +280,7 @@
     color: #a58a5d;
 }
 .func .more{
-    height: 38px;
+    height: 25px;
     padding: 0 66px;
     font-size: 14px;
     line-height: 16px;
@@ -378,7 +382,10 @@
 }
 
 /*geetest验证码*/
-#banner .gt_holder{
+#search .gt_holder{
     margin-top: 44px;
 }
-
+#login .gt_holder{
+    margin-top: 10px;
+    margin-left: -34px;
+}

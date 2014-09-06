@@ -27,6 +27,7 @@ html(lang="zh_CN")
                             input.input-text.search-input(type="text",placeholder="请输入智溯码进行查询")
                             script(src="http://api.geetest.com/get.php?gt=e266eab79debb5bb3e85597bb6122f87")
                             button.search(type="submit") 查询
+                    //- 登录框需要显示验证码的时候在 #login 上加 .with-captcha，并把geetest的script注释去掉
                     #login.form
                         a.switch.switch-search(href="#")
                         .error-tip
@@ -35,7 +36,7 @@ html(lang="zh_CN")
                             input.input-text.username-input(type="text",placeholder="用户名输入")
                             input.input-text.password-input(type="password",placeholder="密码输入")
                             span.clear-username
-                            //- script(src="http://api.geetest.com/get.php?gt=e266eab79debb5bb3e85597bb6122f87")
+                            //- script(src="http://api.geetest.com/get.php?gt=0f03c8aafa45ae88d8ba7d82981d7c2d")
                             .operation.clr
                                 .left
                                     input.keep-login(type="checkbox")

@@ -11,7 +11,7 @@ require([
     ], function($) {
     'use strict';
 
-    var searchGeetest = false; // 搜索拖动验证
+    var geetest = false; // 拖动验证
 
     var func = {
         // banner滚动
@@ -25,7 +25,8 @@ require([
                     active: false
                 },
                 play: {
-                    auto: true
+                    auto: true,
+                    pauseOnHover: true
                 },
                 callback: {
                     loaded: function() {
@@ -156,7 +157,7 @@ require([
                     showError('请输入智溯码');
                     return false;
                 }
-                if(!searchGeetest){
+                if(!geetest){
                     showError('请完成拖动验证');
                     return false;
                 }
@@ -211,6 +212,10 @@ require([
                     showError('请输入密码');
                     return false;
                 }
+                if(!geetest){
+                    showError('请完成拖动验证');
+                    return false;
+                }
                 errorTip.hide();
                 loginForm.submit();
             }
@@ -224,7 +229,7 @@ require([
         // http://geetest.com/install/#api
         geetest: function(){
             var gt_custom_ajax = function(result, selector, message){
-                searchGeetest = !!result;
+                geetest = !!result;
             };
 
             window.gt_custom_ajax = gt_custom_ajax;

@@ -17,13 +17,14 @@
 }
 #topbar .item{
     float: left;
-    margin-left: 22px;
-    _display: inline;
+    /*margin-left: 22px;*/
+    /*_display: inline;*/
 }
 #topbar li a,
 #topbar .user span{
     float: left;
     height: 30px;
+    padding-right: 10px;
 }
 #topbar a.itts{
     color: #9bacdc;

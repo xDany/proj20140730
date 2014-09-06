@@ -9,7 +9,8 @@ require(['jquery'], function($) {
     var func = {
         email: function(){
             var input = $('#email'),
-                form = $('form');
+                form = $('form'),
+                errorTip = $('.success-mobile .error-tip');
 
             input.keypress(function(e){
                 var code = e.keyCode || e.which;
@@ -26,13 +27,16 @@ require(['jquery'], function($) {
             function validate(){
                 if(input.val() === ''){
                     input.removeClass('input-error');
+                    errorTip.hide();
                     return false;
                 }
                 var vali = isEmail(input.val());
                 if(!vali){
                     input.addClass('input-error');
+                    errorTip.show().html('请输入正确的邮箱格式');
                 }else{
                     input.removeClass('input-error');
+                    errorTip.hide();
                 }
                 return vali;
             }
