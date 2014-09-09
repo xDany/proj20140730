@@ -190,9 +190,10 @@ define(['jquery'], function(jQuery) {
                         return paginationLink.click(function(e) {
                             e.preventDefault();
                             _this.stop(true);
-                            setTimeout((function() {
+                            clearTimeout(_this.paginationTimer);
+                            _this.paginationTimer = setTimeout((function() {
                                 _this.play(true);
-                            }), 3000);
+                            }), _this.options.play.interval);
                             return _this.goto(($(e.currentTarget).attr("data-slidesjs-item") * 1) + 1);
                         });
                     });
