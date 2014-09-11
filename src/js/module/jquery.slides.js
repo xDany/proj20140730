@@ -190,11 +190,8 @@ define(['jquery'], function(jQuery) {
                         return paginationLink.click(function(e) {
                             e.preventDefault();
                             _this.stop(true);
-                            clearTimeout(_this.paginationTimer);
-                            _this.paginationTimer = setTimeout((function() {
-                                _this.play(true);
-                            }), _this.options.play.interval);
-                            return _this.goto(($(e.currentTarget).attr("data-slidesjs-item") * 1) + 1);
+                            _this.goto(($(e.currentTarget).attr("data-slidesjs-item") * 1) + 1);
+                            _this.play();
                         });
                     });
                 }
@@ -409,13 +406,15 @@ define(['jquery'], function(jQuery) {
                     if (this.options.play.pauseOnHover) {
                         slidesContainer.unbind();
                         slidesContainer.bind("mouseenter", function() {
+                            clearTimeout(_this.pauseEndTimer);
                             return _this.stop();
                         });
                         slidesContainer.bind("mouseleave", function() {
                             if (_this.options.play.restartDelay) {
-                                return $.data(_this, "restartDelay", setTimeout((function() {
+                                _this.pauseEndTimer = setTimeout((function() {
                                     return _this.play(true);
-                                }), _this.options.play.restartDelay));
+                                }), _this.options.play.restartDelay);
+                                return $.data(_this, "restartDelay", _this.pauseEndTimer);
                             } else {
                                 return _this.play();
                             }
