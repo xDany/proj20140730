@@ -1,10 +1,9 @@
 var gulp       = require('gulp');
 var jade       = require('gulp-jade');
-var rjs        = require('gulp-requirejs');
+var rjs        = require('requirejs');
 var clean      = require('gulp-clean');
 var jshint     = require('gulp-jshint');
 var minifycss  = require('gulp-minify-css');
-var concat     = require('gulp-concat');
 var uglify     = require('gulp-uglify');
 // var prettify   = require('gulp-html-prettify');
 var livereload = require('gulp-livereload');
@@ -33,15 +32,6 @@ gulp.task('livereload', function(){
         server.changed(file.path);
     });
 });
-
-// gulp.task('requirejs', function(){
-//     rjs({
-//         baseUrl: './js/page/index.js',
-//         out: './build/js/page/index.js'
-//     })
-//         .pipe(gulp.dest('./build/'));
-// });
-
 
 // 检验js
 gulp.task('lint', function() {
@@ -84,29 +74,35 @@ gulp.task('css', ['clean'], function() {
     gulp.src('src/css/**/*.css', {base: 'src'})
         .pipe(minifycss())
         .pipe(gulp.dest('build'));
-
-    gulp.src([
-        'src/css/global/reset.css',
-        'src/css/global/common.css',
-        'src/css/module/topbar.css',
-        'src/css/module/header.css',
-        'src/css/module/footer.css'
-    ])
-        .pipe(minifycss())
-        .pipe(concat('global.css'))
-        .pipe(gulp.dest('build/css/global/'));
 });
 
-// 压缩js
+// 压缩合并js
 gulp.task('js', ['clean'], function() {
-    gulp.src('src/js/**/*.js', {base: 'src'})
-        .pipe(uglify())
-        .pipe(gulp.dest('build'));
+    rjs.optimize({
+        // 源目录和目标目录
+        appDir: 'src/js',
+        dir: 'build/js',
+        // 默认模块路径
+        baseUrl: './module',
+        // 需要处理合并的文件
+        modules: [
+            {
+                name: '../global/global'
+            }
+        ],
+        // 自定义模块路径
+        paths: {
+            'jquery': '../lib/jquery-latest'
+        },
+        // 被合并后的文件是否删除
+        removeCombined: false
+    });
+
 });
 
 // 开发
 gulp.task('default', ['templates', 'templatesWatch', 'livereload']);
-// 测试
+// js语法检查
 gulp.task('test', ['lint']);
 // 打包发布
-gulp.task('build', ['test', 'jade', 'img', 'css', 'js']);
+gulp.task('build', ['jade', 'img', 'css', 'js']);

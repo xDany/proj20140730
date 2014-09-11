@@ -6,5 +6,5 @@
 require(['jquery', 'jquery.fancybox'], function($){
     $(function(){
         $('.fancybox').fancybox();
-    })
+    });
 });
